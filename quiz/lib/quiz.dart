@@ -76,7 +76,7 @@ class _QuizState extends State<Quiz> {
                 ),
               ),
               SizedBox(
-                 width: double.infinity,
+                width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => print('clicou 02'),
                   child: Text(
@@ -88,7 +88,7 @@ class _QuizState extends State<Quiz> {
                 ),
               ),
               SizedBox(
-                 width: double.infinity,
+                width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => print('clicou 03'),
                   child: Text(
@@ -100,7 +100,7 @@ class _QuizState extends State<Quiz> {
                 ),
               ),
               SizedBox(
-                 width: double.infinity,
+                width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => print('clicou 04'),
                   child: Text(
