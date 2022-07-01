@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:quiz/quiz.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -9,12 +10,12 @@ class Homepage extends StatelessWidget {
       title: 'Quiz',
       theme: ThemeData(
           useMaterial3: true,
-          colorSchemeSeed: Color.fromARGB(221, 108, 253, 10),
+          colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
           scaffoldBackgroundColor: const Color.fromARGB(255, 211, 240, 237),
           brightness: Brightness.light),
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(197, 96, 219, 14),
+          backgroundColor: const Color.fromARGB(197, 96, 219, 14),
           title: const Center(
             child: Text(
               'Quiz Português',
@@ -36,7 +37,9 @@ class Homepage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () => print('clicou'),
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'Quiz');
+                    },
                     child: const Text(
                       'JOGAR',
                       style: TextStyle(fontSize: 40),

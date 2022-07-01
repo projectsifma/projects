@@ -1,10 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class Resultados extends StatelessWidget {
-  const Resultados({Key? key}) : super(key: key);
-  //final int acertos;
+  final int acertos;
+
+  const Resultados({required this.acertos, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +31,13 @@ class Resultados extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 const Text('Resultado', style: TextStyle(fontSize: 25)),
-                  Text('Você acertou\n 9 de 10\n perguntas',
+                Text('Você acertou\n $acertos de 10\n perguntas',
                     style: TextStyle(fontSize: 25)),
                 //const Padding(padding: EdgeInsets.all(0)),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () => print ('clicou'),
+                    onPressed: () => print('clicou'),
                     child: const Text(
                       'JOGAR NOVAMENTE',
                       style: TextStyle(fontSize: 24),

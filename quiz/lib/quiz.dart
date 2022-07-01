@@ -37,12 +37,12 @@ class _QuizState extends State<Quiz> {
       title: 'Quiz',
       theme: ThemeData(
           //useMaterial3: true,
-          colorSchemeSeed: const Color.fromARGB(221, 23, 175, 155),
+          colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
           scaffoldBackgroundColor: const Color.fromARGB(255, 211, 240, 237),
           brightness: Brightness.light),
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(221, 23, 175, 155),
+          backgroundColor: const Color.fromARGB(221, 108, 253, 10),
           title: const Center(
             child: Text(
               'Quiz Português',
