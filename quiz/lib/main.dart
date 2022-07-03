@@ -4,7 +4,7 @@ import 'quiz.dart';
 import 'resultados.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

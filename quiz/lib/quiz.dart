@@ -15,12 +15,7 @@ class _QuizState extends State<Quiz> {
     List quiz = [
       {
         "Pergunta": "Quem descobriu o Brasil?",
-        "Respostas": [
-          "Dom Pedro I",
-          "Pedro Alvares Cabral",
-          "Tiradentes",
-          "Dom Predro II"
-        ],
+        "Respostas": ["Dom Pedro I","Pedro Alvares Cabral","Tiradentes","Dom Predro II"],
         "Alternativas_Corretas": 2,
       }
     ];
