@@ -15,18 +15,23 @@ class _QuizState extends State<Quiz> {
     List quiz = [
       {
         "Pergunta": "Quem descobriu o Brasil?",
-        "Respostas": ["Dom Pedro I","Pedro Alvares Cabral","Tiradentes","Dom Predro II"],
+        "Respostas": [
+          "Dom Pedro I",
+          "Pedro Alvares Cabral",
+          "Tiradentes",
+          "Dom Predro II"
+        ],
         "Alternativas_Corretas": 2,
       }
     ];
     quiz.add({
-      "Pergunta": "Flutter é",
+      "Pergunta": "O que é Flutter?",
       "Respostas": ["Uma linguagem", "Um aplicativo", "Um SDK", "Um notebook"],
       "Alternativas_Corretas": 3,
     });
     print(quiz);
 
-    int perguntaNumero = 2;
+    int perguntaNumero = 1;
 
     return MaterialApp(
       title: 'Quiz',
@@ -55,7 +60,7 @@ class _QuizState extends State<Quiz> {
                   child: Text('Pergunta $perguntaNumero de 10',
                       style: TextStyle(fontSize: 20))),
               Text(
-                'Pergunta:\n\n' + quiz[perguntaNumero - 1]['Pergunta'],
+                '\n\n' + quiz[perguntaNumero - 1]['Pergunta'],
                 style: TextStyle(fontSize: 20),
               ),
               SizedBox(
@@ -79,7 +84,7 @@ class _QuizState extends State<Quiz> {
                     style: TextStyle(fontSize: 25),
                   ),
                   style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.fromLTRB(100, 15, 100, 15)),
+                      padding: EdgeInsets.fromLTRB(65, 15, 65, 15)),
                 ),
               ),
               SizedBox(
