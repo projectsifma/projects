@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class Quiz extends StatefulWidget {
@@ -31,7 +29,7 @@ class _QuizState extends State<Quiz> {
     });
     print(quiz);
 
-    int perguntaNumero = 1;
+    int perguntaNumero = 2;
 
     return MaterialApp(
       title: 'Quiz',
@@ -58,57 +56,57 @@ class _QuizState extends State<Quiz> {
               Align(
                   alignment: Alignment.topRight,
                   child: Text('Pergunta $perguntaNumero de 10',
-                      style: TextStyle(fontSize: 20))),
+                      style: const TextStyle(fontSize: 20))),
               Text(
-                '\n\n' + quiz[perguntaNumero - 1]['Pergunta'],
-                style: TextStyle(fontSize: 20),
+                '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
+                style: const TextStyle(fontSize: 20),
               ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => print('clicou 01'),
-                  child: Text(
-                    quiz[perguntaNumero - 1]['Respostas'][0],
-                    style: TextStyle(fontSize: 25),
-                  ),
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(100, 15, 100, 15)),
+                  child: Text(
+                    quiz[perguntaNumero - 1]['Respostas'][0],
+                    style: const TextStyle(fontSize: 25),
+                  ),
                 ),
               ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => print('clicou 02'),
+                  style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.fromLTRB(65, 15, 65, 15)),
                   child: Text(
                     quiz[perguntaNumero - 1]['Respostas'][1],
-                    style: TextStyle(fontSize: 25),
+                    style: const TextStyle(fontSize: 25),
                   ),
-                  style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.fromLTRB(65, 15, 65, 15)),
                 ),
               ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => print('clicou 03'),
-                  child: Text(
-                    quiz[perguntaNumero - 1]['Respostas'][2],
-                    style: TextStyle(fontSize: 25),
-                  ),
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(100, 15, 100, 15)),
+                  child: Text(
+                    quiz[perguntaNumero - 1]['Respostas'][2],
+                    style: const TextStyle(fontSize: 25),
+                  ),
                 ),
               ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => print('clicou 04'),
-                  child: Text(
-                    quiz[perguntaNumero - 1]['Respostas'][3],
-                    style: TextStyle(fontSize: 25),
-                  ),
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(100, 15, 100, 15)),
+                  child: Text(
+                    quiz[perguntaNumero - 1]['Respostas'][3],
+                    style: const TextStyle(fontSize: 25),
+                  ),
                 ),
               ),
             ],

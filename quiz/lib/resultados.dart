@@ -32,18 +32,18 @@ class Resultados extends StatelessWidget {
               children: <Widget>[
                 const Text('Resultado', style: TextStyle(fontSize: 25)),
                 Text('Você acertou\n $acertos de 10\n perguntas',
-                    style: TextStyle(fontSize: 25)),
+                    style: const TextStyle(fontSize: 25)),
                 //const Padding(padding: EdgeInsets.all(0)),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () => print('clicou'),
+                    style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20)),
                     child: const Text(
                       'JOGAR NOVAMENTE',
                       style: TextStyle(fontSize: 24),
                     ),
-                    style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20)),
                   ),
                 )
               ],

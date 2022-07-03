@@ -40,12 +40,12 @@ class Homepage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, 'Quiz');
                     },
+                    style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.fromLTRB(100, 13, 100, 13)),
                     child: const Text(
                       'JOGAR',
                       style: TextStyle(fontSize: 40),
                     ),
-                    style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.fromLTRB(100, 13, 100, 13)),
                   ),
                 )
               ],
