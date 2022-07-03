@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/resultados.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
@@ -8,6 +9,9 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  int perguntaNumero = 1;
+  int erros = 0;
+  int acertos = 0;
   @override
   Widget build(BuildContext context) {
     List quiz = [
@@ -27,9 +31,38 @@ class _QuizState extends State<Quiz> {
       "Respostas": ["Uma linguagem", "Um aplicativo", "Um SDK", "Um notebook"],
       "Alternativas_Corretas": 3,
     });
-    print(quiz);
+    for (int i = 3; i <= 20; i++) {
+      quiz.add({
+        "Pergunta": "Pergunta $i?",
+        "Respostas": ["Resposta 1", "Resposta 2", "Resposta 3", "Resposta 4"],
+        "Alternativas_Corretas": 1,
+      });
+    }
+    print('Dados Quiz');
+    //print(quiz);
 
-    int perguntaNumero = 2;
+    void respondeu(int respostaNumero) {
+      setState(() {
+        if (quiz[perguntaNumero - 1]["Alternativas_Corretas"] ==
+            respostaNumero) {
+          print('Você acertou!');
+          acertos++;
+        } else {
+          print('Você errou!');
+          erros++;
+        }
+
+        print('acertos totais: $acertos erros totais: $erros');
+
+        if (perguntaNumero == 10) {
+          print('Terminou o Quiz!');
+          Navigator.pushNamed(context, '/Resultados',
+              arguments: Argumentos(acertos)); //passando parametro p/ tela
+        } else {
+          perguntaNumero++;
+        }
+      });
+    }
 
     return MaterialApp(
       title: 'Quiz',
@@ -64,7 +97,10 @@ class _QuizState extends State<Quiz> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => print('clicou 01'),
+                  onPressed: () {
+                    print('Pressionado 01');
+                    respondeu(1);
+                  },
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(100, 15, 100, 15)),
                   child: Text(
@@ -76,7 +112,10 @@ class _QuizState extends State<Quiz> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => print('clicou 02'),
+                  onPressed: () {
+                    print('Pressionado 02');
+                    respondeu(2);
+                  },
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(65, 15, 65, 15)),
                   child: Text(
@@ -88,7 +127,10 @@ class _QuizState extends State<Quiz> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => print('clicou 03'),
+                  onPressed: () {
+                    print('Pressionado 03');
+                    respondeu(3);
+                  },
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(100, 15, 100, 15)),
                   child: Text(
@@ -100,7 +142,10 @@ class _QuizState extends State<Quiz> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => print('clicou 04'),
+                  onPressed: () {
+                    print('Pressionado 04');
+                    respondeu(4);
+                  },
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(100, 15, 100, 15)),
                   child: Text(

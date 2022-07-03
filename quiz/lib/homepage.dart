@@ -38,7 +38,7 @@ class Homepage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'Quiz');
+                      Navigator.pushNamed(context, '/Quiz');
                     },
                     style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.fromLTRB(100, 13, 100, 13)),
