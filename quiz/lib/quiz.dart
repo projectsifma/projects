@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'resultados.dart';
+import 'quizDados.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
@@ -15,83 +16,29 @@ class _QuizState extends State<Quiz> {
   int acertos = 0;
   @override
   Widget build(BuildContext context) {
-    List quiz = [
-      {
-        "Pergunta": "Quem descobriu o Brasil?",
-        "Respostas": [
-          "Dom Pedro I",
-          "Pedro Alvares Cabral",
-          "Tiradentes",
-          "Dom Predro II"
-        ],
-        "Alternativas_Corretas": 2,
-      }
-    ];
-    quiz.add({
-      "Pergunta": "O que é Flutter?",
-      "Respostas": [
-        "Uma linguagem de programção",
-        "Um aplicativo",
-        "Um SDK",
-        "Um notebook"
-      ],
-      "Alternativas_Corretas": 3,
+    quiz.shuffle();//Serve para embaralhar as perguntas
+
+    //Função para embaralhar as respostas
+    quiz.forEach((elemento) {
+
+      int altCorreta = elemento['Alternativas_Corretas'];
+      List respostas = elemento['Respostas'];
+
+      String resCorreta = elemento['Respostas'][altCorreta - 1];
+
+      respostas.shuffle();
+      int i = 0;
+
+      respostas.forEach((elemento) {
+        print(elemento);
+        if (elemento == resCorreta) {
+          altCorreta = i;
+        }
+        i++;
+      });
+      elemento['Alternativas_Corretas'] = altCorreta;
     });
-    quiz.add({
-      "Pergunta": "O Brasil faz parte de qual bloco econômico?",
-      "Respostas": ["Mercosul", "CEI", "NAFTA", "União Europeia"],
-      "Alternativas_Corretas": 1,
-    });
-    quiz.add({
-      "Pergunta": "Normalmente, quantos litros de sangue uma pessoa tem?",
-      "Respostas": [
-        "Tem entre 2 a 4 litros",
-        "Tem entre 4 a 6 litros",
-        "Tem 10 litros",
-        "Tem 7 litros"
-      ],
-      "Alternativas_Corretas": 2,
-    });
-    quiz.add({
-      "Pergunta": "De quem é a famosa frase “Penso, logo existo”?",
-      "Respostas": ["Platão", "Galileu Galilei", "Descartes", "Sócrates"],
-      "Alternativas_Corretas": 3,
-    });
-    quiz.add({
-      "Pergunta": "Quais o menor e o maior país do mundo?",
-      "Respostas": [
-        "Vaticano e Rússia",
-        "Nauru e China",
-        "Mônaco e Canadá",
-        "São Marino e Índia"
-      ],
-      "Alternativas_Corretas": 1,
-    });
-    quiz.add({
-      "Pergunta": "Quantas casas decimais tem o número pi?",
-      "Respostas": ["Milhares", "Vinte", "Centenas", "Infinitas"],
-      "Alternativas_Corretas": 4,
-    });
-    quiz.add({
-      "Pergunta": "Quanto tempo a luz do Sol demora para chegar à Terra?",
-      "Respostas": ["12 minutos", "1 dia", "8 minutos", "segundos"],
-      "Alternativas_Corretas": 3,
-    });
-    quiz.add({
-      "Pergunta": "Em que período da pré-história o fogo foi descoberto?",
-      "Respostas": [
-        "Paleolítico",
-        "Idade dos Metais",
-        "Neolítico",
-        "Período da Pedra Polida"
-      ],
-      "Alternativas_Corretas": 1,
-    });
-    quiz.add({
-      "Pergunta": "Em qual local da Ásia o português é língua oficial?",
-      "Respostas": ["Índia", "Macau", "Filipinas", "Moçambique"],
-      "Alternativas_Corretas": 2,
-    });
+   
     /*for (int i = 10; i <= 20; i++) {
       quiz.add({
         "Pergunta": "Pergunta $i?",
