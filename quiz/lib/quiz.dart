@@ -89,6 +89,7 @@ class _QuizState extends State<Quiz> {
             ),
           ),
         ),*/
+
         body: Stack(
           fit: StackFit.expand,
           children: [
@@ -101,123 +102,144 @@ class _QuizState extends State<Quiz> {
                       end: FractionalOffset.bottomCenter,
                       colors: [_accentColor.withOpacity(0.1), _accentColor],
                       stops: const [0.0, 1.0])),
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Stack(
-                      children: [
-                        Container(
-                          height: 60,
-                          width: double.infinity,
-                          //decoration: const BoxDecoration(
-                          //color: Color.fromARGB(207, 14, 144, 219)),
-                          child: Align(
-                              alignment: Alignment.centerRight,
-                              child: Text('Pergunta $perguntaNumero/10',
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    flex: 6,
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Container(
+                        child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Text('Pergunta $perguntaNumero/10',
+                                style: const TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold))),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 6,
+                    //child: ClipRRect(
+                    //borderRadius: BorderRadius.circular(15),
+                    child: Container(
+                      width: double.infinity,
+                      color: Color.fromARGB(255, 43, 29, 87),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Container(
+                          child: Text(
+                            '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 25.0,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ),
+                    //),
+                  ),
+                  Expanded(
+                    flex: 10,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Container(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                              width: double.infinity,
+                              height: 55,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  print('Pressionado 01');
+                                  respondeu(1);
+                                },
+                                color: Colors.orange,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(10.0))),
+                                child: Text(
+                                  quiz[perguntaNumero - 1]['Respostas'][0],
                                   style: const TextStyle(
-                                      fontSize: 20,
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold))),
-                        ),
-                      ],
-                    ),
-                    Center(
-                      child: Text(
-                        '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
-                        style: const TextStyle(
-                            color: Colors.orange,
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50,
-                      child: MaterialButton(
-                        onPressed: () {
-                          print('Pressionado 01');
-                          respondeu(1);
-                        },
-                        color: Colors.orange,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0))),
-                        child: Text(
-                          quiz[perguntaNumero - 1]['Respostas'][0],
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50,
-                      child: MaterialButton(
-                        onPressed: () {
-                          print('Pressionado 02');
-                          respondeu(2);
-                        },
-                        color: Colors.orange,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0))),
-                        child: Text(
-                          quiz[perguntaNumero - 1]['Respostas'][1],
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50,
-                      child: MaterialButton(
-                        onPressed: () {
-                          print('Pressionado 03');
-                          respondeu(3);
-                        },
-                        color: Colors.orange,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0))),
-                        child: Text(
-                          quiz[perguntaNumero - 1]['Respostas'][2],
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold),
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: 55,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  print('Pressionado 02');
+                                  respondeu(2);
+                                },
+                                color: Colors.orange,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(10.0))),
+                                child: Text(
+                                  quiz[perguntaNumero - 1]['Respostas'][1],
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: 55,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  print('Pressionado 03');
+                                  respondeu(3);
+                                },
+                                color: Colors.orange,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(10.0))),
+                                child: Text(
+                                  quiz[perguntaNumero - 1]['Respostas'][2],
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: 50,
+                              child: MaterialButton(
+                                onPressed: () {
+                                  print('Pressionado 04');
+                                  respondeu(4);
+                                },
+                                color: Colors.orange,
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(10.0))),
+                                child: Text(
+                                  quiz[perguntaNumero - 1]['Respostas'][3],
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50,
-                      child: MaterialButton(
-                        onPressed: () {
-                          print('Pressionado 04');
-                          respondeu(4);
-                        },
-                        color: Colors.orange,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0))),
-                        child: Text(
-                          quiz[perguntaNumero - 1]['Respostas'][3],
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],
