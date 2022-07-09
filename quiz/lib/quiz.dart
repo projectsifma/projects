@@ -103,10 +103,10 @@ class _QuizState extends State<Quiz> {
                       colors: [_accentColor.withOpacity(0.1), _accentColor],
                       stops: const [0.0, 1.0])),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Expanded(
-                    flex: 6,
+                    flex: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Container(
@@ -121,7 +121,7 @@ class _QuizState extends State<Quiz> {
                     ),
                   ),
                   Expanded(
-                    flex: 6,
+                    flex: 7,
                     //child: ClipRRect(
                     //borderRadius: BorderRadius.circular(15),
                     child: Container(
@@ -130,12 +130,17 @@ class _QuizState extends State<Quiz> {
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Container(
-                          child: Text(
-                            '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
-                            style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold),
+                          child: Align(
+                            alignment: Alignment.topCenter,
+                            //child: Center(
+                            child: Text(
+                              '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 27.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            //),
                           ),
                         ),
                       ),
@@ -238,6 +243,10 @@ class _QuizState extends State<Quiz> {
                         ),
                       ),
                     ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(),
                   ),
                 ],
               ),
