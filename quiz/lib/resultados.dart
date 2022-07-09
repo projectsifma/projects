@@ -42,18 +42,23 @@ class Resultados extends StatelessWidget {
                     style: const TextStyle(fontSize: 25)),
                 //const Padding(padding: EdgeInsets.all(0)),
                 SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
+                  width: 325,
+                  height: 50,
+                  child: MaterialButton(
                     onPressed: () {
                       print('Pressionado');
                       Navigator.pushNamed(context, '/Quiz');
                       //Navigator.pop(context); //voltar
                     },
-                    style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20)),
+                    color: Colors.orange,
+                    shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
                     child: const Text(
-                      'JOGAR NOVAMENTE',
-                      style: TextStyle(fontSize: 24),
+                      'Jogar Novamente',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 )
