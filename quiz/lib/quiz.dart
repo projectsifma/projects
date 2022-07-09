@@ -16,18 +16,17 @@ class _QuizState extends State<Quiz> {
   int acertos = 0;
   @override
   Widget build(BuildContext context) {
-    quiz.shuffle();//Serve para embaralhar as perguntas
+    quiz.shuffle(); //Serve para embaralhar as perguntas
 
     //Função para embaralhar as respostas
     quiz.forEach((elemento) {
-
       int altCorreta = elemento['Alternativas_Corretas'];
       List respostas = elemento['Respostas'];
 
       String resCorreta = elemento['Respostas'][altCorreta - 1];
 
       respostas.shuffle();
-      int i = 0;
+      int i = 1;
 
       respostas.forEach((elemento) {
         print(elemento);
@@ -38,7 +37,7 @@ class _QuizState extends State<Quiz> {
       });
       elemento['Alternativas_Corretas'] = altCorreta;
     });
-   
+
     /*for (int i = 10; i <= 20; i++) {
       quiz.add({
         "Pergunta": "Pergunta $i?",
