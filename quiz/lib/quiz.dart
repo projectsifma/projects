@@ -171,7 +171,7 @@ class _QuizState extends State<Quiz> {
                                   quiz[perguntaNumero - 1]['Respostas'][0],
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 20.0,
+                                      fontSize: 23.0,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -192,7 +192,7 @@ class _QuizState extends State<Quiz> {
                                   quiz[perguntaNumero - 1]['Respostas'][1],
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 20.0,
+                                      fontSize: 23.0,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -213,7 +213,7 @@ class _QuizState extends State<Quiz> {
                                   quiz[perguntaNumero - 1]['Respostas'][2],
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 20.0,
+                                      fontSize: 23.0,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -234,7 +234,7 @@ class _QuizState extends State<Quiz> {
                                   quiz[perguntaNumero - 1]['Respostas'][3],
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 20.0,
+                                      fontSize: 23.0,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
