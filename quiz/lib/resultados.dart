@@ -18,11 +18,11 @@ class Resultados extends StatelessWidget {
       title: 'Quiz',
       theme: ThemeData(
           useMaterial3: true,
-          colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
-          scaffoldBackgroundColor: const Color.fromARGB(255, 211, 240, 237),
+         // colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
+          scaffoldBackgroundColor: const Color(0xAA21325E),
           brightness: Brightness.light),
       home: Scaffold(
-        appBar: AppBar(
+        /*appBar: AppBar(
           backgroundColor: const Color.fromARGB(197, 96, 219, 14),
           title: const Center(
             child: Text(
@@ -30,16 +30,16 @@ class Resultados extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
           ),
-        ),
+        ),*/
         body: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                const Text('Resultado', style: TextStyle(fontSize: 25)),
+                const Text('Resultado', style: TextStyle(fontSize: 25, color: Colors.white)),
                 Text('Você acertou\n ${argumentos.acertos} de 10\n perguntas',
-                    style: const TextStyle(fontSize: 25)),
+                    style: const TextStyle(fontSize: 25,  color: Colors.white)),
                 //const Padding(padding: EdgeInsets.all(0)),
                 SizedBox(
                   width: 325,
@@ -50,14 +50,14 @@ class Resultados extends StatelessWidget {
                       Navigator.pushNamed(context, '/Quiz');
                       //Navigator.pop(context); //voltar
                     },
-                    color: Colors.orange,
+                    color: Color(0xAA17EC0D),
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20.0))),
                     child: const Text(
-                      'Jogar Novamente',
+                      'JOGAR NOVAMENTE',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20.0,
+                          fontSize: 22.0,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
