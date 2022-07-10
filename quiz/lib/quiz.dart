@@ -106,7 +106,7 @@ class _QuizState extends State<Quiz> {
                 //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Expanded(
-                    flex: 4,
+                    flex: 5,
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Container(
@@ -126,22 +126,33 @@ class _QuizState extends State<Quiz> {
                     //borderRadius: BorderRadius.circular(15),
                     child: Container(
                       width: double.infinity,
-                      color: Color.fromARGB(255, 43, 29, 87),
+                      color: const Color.fromARGB(255, 43, 29, 87),
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Container(
-                          child: Align(
-                            alignment: Alignment.topCenter,
-                            //child: Center(
-                            child: Text(
-                              '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 27.0,
-                                  fontWeight: FontWeight.bold),
+                          //child: Align(
+                          //alignment: Alignment.topCenter,
+
+                          //child: Center(
+                          child: Center(
+                            child: Column(
+                              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Center(
+                                  child: Text(
+                                    '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
+                                    style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25.0,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ],
                             ),
-                            //),
                           ),
+                          //),
+                          //),
                         ),
                       ),
                     ),
@@ -171,7 +182,7 @@ class _QuizState extends State<Quiz> {
                                   quiz[perguntaNumero - 1]['Respostas'][0],
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 23.0,
+                                      fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -192,7 +203,7 @@ class _QuizState extends State<Quiz> {
                                   quiz[perguntaNumero - 1]['Respostas'][1],
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 23.0,
+                                      fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -213,14 +224,14 @@ class _QuizState extends State<Quiz> {
                                   quiz[perguntaNumero - 1]['Respostas'][2],
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 23.0,
+                                      fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
                             SizedBox(
                               width: double.infinity,
-                              height: 50,
+                              height: 55,
                               child: MaterialButton(
                                 onPressed: () {
                                   print('Pressionado 04');
@@ -234,7 +245,7 @@ class _QuizState extends State<Quiz> {
                                   quiz[perguntaNumero - 1]['Respostas'][3],
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 23.0,
+                                      fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -245,7 +256,7 @@ class _QuizState extends State<Quiz> {
                     ),
                   ),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Container(),
                   ),
                 ],
