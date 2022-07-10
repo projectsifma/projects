@@ -116,7 +116,7 @@ List quiz = [
   },
   {
     "Pergunta": "Qual é o plural de chapéu?",
-    "Respostas": ["Chapéus", "Chapeletas", "Cartolas", "Chapéis"],
+    "Respostas": ["chapéus", "chapeletas", "cartolas", "chapéis"],
     "Alternativas_Corretas": 1,
   },
   {
@@ -168,7 +168,7 @@ List quiz = [
   {
     "Pergunta": 'A palavra "latifúndio" está relacionada com:',
     "Respostas": [
-      "coordenadas geográficas",
+      "coordenadas geográficas de um local",
       "abrigo para cães",
       "produtos de derivados do leite",
       "grande área rural"
@@ -187,235 +187,235 @@ List quiz = [
   },
   
   {
-   "Perguntas": 'Qual das palavras abaixo é sinônimo de banal?',
+   "Pergunta": 'Qual das palavras abaixo é sinônimo de banal?',
    "Respostas": ["trivial", "semanal", "bananal", "sensacional"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'O antônimo de agitado é...',
+   "Pergunta": 'O antônimo de agitado é...',
    "Respostas": ["tranquilo", "afobado", "atrasado", "bacana"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'Pejorativo é algo que pode...',
+   "Pergunta": 'Pejorativo é algo que pode...',
    "Respostas": ["cair", "alegrar", "crescer", "ofender"],
    "Alternativas_Corretas": 4,
 },
 
 {
-   "Perguntas": 'Qual dos verbos abaixo está no passado?',
+   "Pergunta": 'Qual dos verbos abaixo está no passado?',
    "Respostas": ["voltará", "olhei", "sei", "andarei"],
    "Alternativas_Corretas": 2,
 },
 
 {
-   "Perguntas": 'Qual das palavras abaixo é um adjetivo?',
+   "Pergunta": 'Qual das palavras abaixo é um adjetivo?',
    "Respostas": ["geada", "galeto", "gordo", "gelatina"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Qual a forma correta de escrita da palavra abaixo?',
+   "Pergunta": 'Qual a forma correta de escrita da palavra abaixo?',
    "Respostas": ["exçessão", "exçeção", "exceção" , "excessão"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Uma loja que vende itens necessários à costura ou ao bordado (botão, linha, tecido, etc) é uma loja de...',
+   "Pergunta": 'Uma loja que vende itens necessários à costura ou ao bordado (botão, linha, tecido, etc) é uma loja de...',
    "Respostas": ["filatelia", "aviamentos", "relíquias", "artesanato"],
    "Alternativas_Corretas": 2,
 },
 
 {
-   "Perguntas": 'A palavra "anistia" tem relação com:',
+   "Pergunta": 'A palavra "anistia" tem relação com:',
    "Respostas": ["perdão", "medicina", "estrangeiros", "independência"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'Algo frágil, delicado ou sensível pode ser chamado de:',
+   "Pergunta": 'Algo frágil, delicado ou sensível pode ser chamado de:',
    "Respostas": ["melindre", "imutável", "engenho", "mazela"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'Jargão significa:',
+   "Pergunta": 'Jargão significa:',
    "Respostas": ["um recipiente", "uma gíria profissional", "um farsante, impostor", "uma medida de comprimento"],
    "Alternativas_Corretas": 2,
 },
 
 {
-   "Perguntas": 'Uma agitação barulhenta, tumulto ou alvoroço é chamada de:'  ,
+   "Pergunta": 'Uma agitação barulhenta, tumulto ou alvoroço é chamada de:'  ,
    "Respostas": ["matinada", "dilema", "discernimento", "atrasamento"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'O que é um hiato?',
+   "Pergunta": 'O que é um hiato?',
    "Respostas": ["embarcação utilizada para lazer no mar", "um hotel famoso em Paris", "duas consoantes iguais na mesma palavra", "duas vogais contíguas que pertencem a sílabas diferentes"],
    "Alternativas_Corretas": 4,
 },
 
 {
-   "Perguntas": 'Qual a cor abaixo que também pode ser substantivo?',
+   "Pergunta": 'Qual a cor abaixo que também pode ser substantivo?',
    "Respostas": ["laranja", "branco", "amarelo", "verde"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'Se uma pessoa fez algo a esmo, significa que ela...',
+   "Pergunta": 'Se uma pessoa fez algo a esmo, significa que ela...',
    "Respostas": ["fez um trabalho espetacular", "praticou uma atividade a cavalo", "fez algo sem certeza, sem exatidão", "trabalhou em um local escuro"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Como é chamado aquele que é ou foi sete vezes campeão?',
+   "Pergunta": 'Como é chamado aquele que é ou foi sete vezes campeão?',
    "Respostas": ["hexacampeão", "heptacampeão", "pentacampeão", "decacampeão"],
    "Alternativas_Corretas": 2,
 },
 
 {
-   "Perguntas": 'Meu filho está _________ com os brinquedos dele.',
+   "Pergunta": 'Meu filho está _________ com os brinquedos dele.',
    "Respostas": ["entertido", "intretido", "intertido", "entretido"],
    "Alternativas_Corretas": 4,
 },
 
 {
-   "Perguntas": 'O coletivo de camelos é...',
+   "Pergunta": 'O coletivo de camelos é...',
    "Respostas": ["alcateia", "cáfila", "matilha", "miríade"],
    "Alternativas_Corretas": 2,
 },
 
 {
-   "Perguntas": 'A palavra "escrúpulo" diz respeito...',
+   "Pergunta": 'A palavra "escrúpulo" diz respeito...',
    "Respostas": ["a um filme de vampiros", "a uma noite de lua cheia", "ao caráter íntegro de uma pessoa", "a um tempero da culinária francesa"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Antagonismo significa:',
+   "Pergunta": 'Antagonismo significa:',
    "Respostas": ["rivalidade, oposição", "ser egoísta", "criar agonia nas pessoas", "criar antas"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'O que significa preleção?',
+   "Pergunta": 'O que significa preleção?',
    "Respostas": ["estudo para uma prova", "plantação de sementes", "prévia dos resultados de uma eleição", "discurso antes da realização de uma tarefa"],
    "Alternativas_Corretas": 4,
 },
 
 {
-   "Perguntas": 'Um evento dedicado à caridade é chamado de evento...',
+   "Pergunta": 'Um evento dedicado à caridade é chamado de evento...',
    "Respostas": ["beneficiente", "eficiente", "beneficente", "descendente"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Quais as palavras abaixo estão relacionadas com o substantivo "antro"?',
+   "Pergunta": 'Quais as palavras abaixo estão relacionadas com o substantivo "antro"?',
    "Respostas": ["céu, lua", "animal, vegetal", "gruta, caverna", "amizade, carinho"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Se uma pessoa age com parcimônia, significa que ela age de forma:',
+   "Pergunta": 'Se uma pessoa age com parcimônia, significa que ela age de forma:',
    "Respostas": ["estúpida", "rápida", "nervosa", "calma"],
    "Alternativas_Corretas": 4,
 },
 
 {
-   "Perguntas": 'Resignado é o mesmo que...',
+   "Pergunta": 'Resignado é o mesmo que...',
    "Respostas": [ "conformado", "contornado", "confiado", "confinado"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'O cordão usado nos tênis é o...',
+   "Pergunta": 'O cordão usado nos tênis é o...',
    "Respostas": ["cardaço", "cardarço", "cadarço", "cadarso"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Quais das palavras abaixo estão relacionadas à palavra "trejeito"?',
+   "Pergunta": 'Quais das palavras abaixo estão relacionadas à palavra "trejeito"?',
    "Respostas": ["movimento, gesticulação", "sinceridade, honestidade", "mentira, falsidade", "calma, tranquilidade"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'Qual das palavras abaixo apresenta erro de grafia?',
+   "Pergunta": 'Qual das palavras abaixo apresenta erro de grafia?',
    "Respostas": ["xingar", "enxugar", "mecher", "encher"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'O que é paroxítona?',
-   "Respostas": ["palavra que possui 4 sílabas", "palavra cujo acento tônico encontra-se na sua penúltima sílaba", "um tipo de árvore", "1uma substância química"],
+   "Pergunta": 'O que é paroxítona?',
+   "Respostas": ["1palavra que possui 4 sílabas", "palavra cujo acento tônico encontra-se na sua penúltima sílaba", "um tipo de árvore", "1uma substância química"],
    "Alternativas_Corretas": 2,
 },
 
 {
-   "Perguntas": 'Na frase "João passou no concurso" o sujeito é:',
+   "Pergunta": 'Na frase "João passou no concurso" o sujeito é:',
    "Respostas": ["inteligente", "competente", "aprovado", "João"],
    "Alternativas_Corretas": 4,
 },
 
 {
-   "Perguntas": 'Xenofobia consiste em uma aversão a...',
+   "Pergunta": 'Xenofobia consiste em uma aversão a...',
    "Respostas": ["altura", "locais fechados", "estrangeiros", "avião"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'O verbo "deturpar" pode ser entendido como:',
+   "Pergunta": 'O verbo "deturpar" pode ser entendido como:',
    "Respostas": ["viajar para o exterior", "explorar a gramática da língua portuguesa", "interpretar mal o sentido de algo", "enviar um estrangeiro de volta ao seu país"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Dogma é um ponto fundamental para...',
+   "Pergunta": 'Dogma é um ponto fundamental para...',
    "Respostas": ["a criação de cachorros", "preservação do meio ambiente", "a preservação da saúde", "uma doutrina religiosa"],
    "Alternativas_Corretas": 4,
 },
 
 {
-   "Perguntas": 'Se as mangas de uma camisa puíram, significa que elas...',
+   "Pergunta": 'Se as mangas de uma camisa puíram, significa que elas...',
    "Respostas": ["gastaram-se devido às roçaduras do uso", "sujaram", "encolheram", "alargaram"],
    "Alternativas_Corretas": 1,
 },
 
 {
-   "Perguntas": 'Gíria é...',
+   "Pergunta": 'Gíria é...',
    "Respostas": ["fêmea do sapo", "língua especial de um grupo social ou etário", "brinquedo giratório", "tipo de pássaro"],
    "Alternativas_Corretas": 2,
 },
 
 {
-   "Perguntas": 'Empatia é...',
+   "Pergunta": 'Empatia é...',
    "Respostas": ["um tipo de hepatite", "um jogo que termina empatado", "aptidão para se identificar com o outro", "o contrário de simpatia"],
    "Alternativas_Corretas": 3,
 },
 
 {
-   "Perguntas": 'Aloprado é o mesmo que:',
+   "Pergunta": 'Aloprado é o mesmo que:',
    "Respostas": ["engraçado", "lesionado", "contente", "adoidado"],
    "Alternativas_Corretas": 4,
 },
 
 {
-   "Perguntas": 'Pandemônio tem relação com:',
+   "Pergunta": 'Pandemônio tem relação com:',
    "Respostas": ["fabricação de pães", "confusão", "epidemia", "diabo"],
    "Alternativas_Corretas": 2,
 },
 
 {
-   "Perguntas": 'O que é uma contingência?',
+   "Pergunta": 'O que é uma contingência?',
    "Respostas": ["um fato imprevisível, eventual", "algo que indica continuação", "um comportamento muito contido", "uma saudação militar"],
    "Alternativas_Corretas": 1,
 }
 /*
 {
-   "Perguntas": '',
+   "Pergunta": '',
    "Respostas": ["", "", "", ""],
    "Alternativas_Corretas": 0,
 },
