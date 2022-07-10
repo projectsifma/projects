@@ -116,7 +116,7 @@ List quiz = [
   },
   {
     "Pergunta": "Qual é o plural de chapéu?",
-    "Respostas": ["chapéus", "chapeletas", "cartolas", "chapéis"],
+    "Respostas": ["Chapéus", "Chapeletas", "Cartolas", "Chapéis"],
     "Alternativas_Corretas": 1,
   },
   {
@@ -168,7 +168,7 @@ List quiz = [
   {
     "Pergunta": 'A palavra "latifúndio" está relacionada com:',
     "Respostas": [
-      "coordenadas geográficas de um local",
+      "coordenadas geográficas",
       "abrigo para cães",
       "produtos de derivados do leite",
       "grande área rural"
