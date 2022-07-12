@@ -10,7 +10,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  final Color _accentColor = const Color(0xFF164CA2);
+ // final Color _accentColor = const Color(0xFF164CA2);
   int perguntaNumero = 1;
   int erros = 0;
   int acertos = 0;
@@ -74,10 +74,10 @@ class _QuizState extends State<Quiz> {
     return MaterialApp(
       title: 'Quiz',
       theme: ThemeData(
-          //useMaterial3: true,
-          /*colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
-          scaffoldBackgroundColor: const Color.fromARGB(255, 211, 240, 237),
-          brightness: Brightness.light*/
+          useMaterial3: true,
+          //colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
+          scaffoldBackgroundColor: const Color(0xAA21325E),
+          brightness: Brightness.light
           ),
       home: Scaffold(
         /*appBar: AppBar(
@@ -97,11 +97,12 @@ class _QuizState extends State<Quiz> {
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
+                  /*gradient: LinearGradient(
                       begin: FractionalOffset.topCenter,
                       end: FractionalOffset.bottomCenter,
                       colors: [_accentColor.withOpacity(0.1), _accentColor],
-                      stops: const [0.0, 1.0])),
+                      stops: const [0.0, 1.0])*/
+                      ),
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -122,13 +123,15 @@ class _QuizState extends State<Quiz> {
                   ),
                   Expanded(
                     flex: 7,
-                    //child: ClipRRect(
-                    //borderRadius: BorderRadius.circular(15),
+                    child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
                     child: Container(
+                      
                       width: double.infinity,
-                      color: const Color.fromARGB(255, 43, 29, 87),
+                      color: const Color(0xAA3E497A),
                       child: Padding(
-                        padding: const EdgeInsets.all(20.0),
+                       
+                        padding: const EdgeInsets.all(10.0),
                         child: Container(
                           //child: Align(
                           //alignment: Alignment.topCenter,
@@ -144,7 +147,7 @@ class _QuizState extends State<Quiz> {
                                     '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
                                     style: const TextStyle(
                                         color: Colors.white,
-                                        fontSize: 25.0,
+                                        fontSize: 22.0,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -156,10 +159,10 @@ class _QuizState extends State<Quiz> {
                         ),
                       ),
                     ),
-                    //),
+                    ),
                   ),
                   Expanded(
-                    flex: 10,
+                    flex: 15,
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Container(
@@ -174,7 +177,7 @@ class _QuizState extends State<Quiz> {
                                   print('Pressionado 01');
                                   respondeu(1);
                                 },
-                                color: Colors.orange,
+                                color: Color(0xAA17EC0D),
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0))),
@@ -195,7 +198,7 @@ class _QuizState extends State<Quiz> {
                                   print('Pressionado 02');
                                   respondeu(2);
                                 },
-                                color: Colors.orange,
+                                color: Color(0xAA17EC0D),
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0))),
@@ -216,7 +219,7 @@ class _QuizState extends State<Quiz> {
                                   print('Pressionado 03');
                                   respondeu(3);
                                 },
-                                color: Colors.orange,
+                                color: Color(0xAA17EC0D),
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0))),
@@ -237,7 +240,7 @@ class _QuizState extends State<Quiz> {
                                   print('Pressionado 04');
                                   respondeu(4);
                                 },
-                                color: Colors.orange,
+                                color: Color(0xAA17EC0D),
                                 shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.circular(10.0))),

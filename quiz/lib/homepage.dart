@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
 
-  @override
-  final Color _accentColor = const Color(0xFF164CA2);
-  final Color _purpleColor = Colors.deepPurple;
+  //@override
+  //final Color _accentColor = const Color(0xAB4F1476);
+  //final Color _purpleColor = Colors.deepPurple;
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Quiz',
       theme: ThemeData(
-          //useMaterial3: true,
-          //colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
-          //scaffoldBackgroundColor: const Color.fromARGB(255, 211, 240, 237),
-          //brightness: Brightness.light),
-          ),
+          useMaterial3: true,
+          //colorSchemeSeed: Color.fromARGB(221, 168, 14, 14),
+          scaffoldBackgroundColor: Color(0xAA21325E),
+          brightness: Brightness.light),
+        
       home: Scaffold(
         //backgroundColor: Colors.deepPurple[100],
         /* appBar: AppBar(
@@ -34,11 +34,12 @@ class Homepage extends StatelessWidget {
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: FractionalOffset.topCenter,
-                      end: FractionalOffset.bottomCenter,
-                      colors: [_accentColor.withOpacity(0.1), _accentColor],
-                      stops: const [0.0, 1.0])),
+                  //gradient: LinearGradient(
+                      //begin: FractionalOffset.topCenter,
+                      //end: FractionalOffset.bottomCenter,
+                      //colors: [_accentColor, _accentColor],
+                     // stops: const [0.0, 1.0])
+                     ),
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
@@ -62,7 +63,7 @@ class Homepage extends StatelessWidget {
                         elevation: 5,
                         onPressed: () => Navigator.pushNamed(context, '/Quiz'),
 
-                        color: Colors.orange,
+                        color: Color(0xAA17EC0D),
                         shape: const RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0))),
@@ -73,7 +74,7 @@ class Homepage extends StatelessWidget {
                           'JOGAR',
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 20.0,
+                              fontSize: 22.0,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
