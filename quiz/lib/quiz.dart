@@ -10,11 +10,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-<<<<<<< HEAD
   // final Color _accentColor = const Color(0xFF164CA2);
-=======
- // final Color _accentColor = const Color(0xFF164CA2);
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
   int perguntaNumero = 1;
   int erros = 0;
   int acertos = 0;
@@ -81,12 +77,7 @@ class _QuizState extends State<Quiz> {
           useMaterial3: true,
           //colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
           scaffoldBackgroundColor: const Color(0xAA21325E),
-<<<<<<< HEAD
           brightness: Brightness.light),
-=======
-          brightness: Brightness.light
-          ),
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
       home: Scaffold(
         /*appBar: AppBar(
           backgroundColor: const Color.fromARGB(221, 108, 253, 10),
@@ -110,11 +101,7 @@ class _QuizState extends State<Quiz> {
                       end: FractionalOffset.bottomCenter,
                       colors: [_accentColor.withOpacity(0.1), _accentColor],
                       stops: const [0.0, 1.0])*/
-<<<<<<< HEAD
                   ),
-=======
-                      ),
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -136,7 +123,6 @@ class _QuizState extends State<Quiz> {
                   Expanded(
                     flex: 7,
                     child: ClipRRect(
-<<<<<<< HEAD
                       borderRadius: BorderRadius.circular(12),
                       child: Container(
                         width: double.infinity,
@@ -161,33 +147,6 @@ class _QuizState extends State<Quiz> {
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold),
                                     ),
-=======
-                    borderRadius: BorderRadius.circular(12),
-                    child: Container(
-                      
-                      width: double.infinity,
-                      color: const Color(0xAA3E497A),
-                      child: Padding(
-                       
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          //child: Align(
-                          //alignment: Alignment.topCenter,
-
-                          //child: Center(
-                          child: Center(
-                            child: Column(
-                              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Center(
-                                  child: Text(
-                                    '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
-                                    style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 22.0,
-                                        fontWeight: FontWeight.bold),
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
                                   ),
                                 ],
                               ),
@@ -198,10 +157,6 @@ class _QuizState extends State<Quiz> {
                         ),
                       ),
                     ),
-<<<<<<< HEAD
-=======
-                    ),
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
                   ),
                   Expanded(
                     flex: 15,

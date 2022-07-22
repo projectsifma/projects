@@ -13,14 +13,8 @@ class Homepage extends StatelessWidget {
       theme: ThemeData(
           useMaterial3: true,
           //colorSchemeSeed: Color.fromARGB(221, 168, 14, 14),
-<<<<<<< HEAD
           scaffoldBackgroundColor: const Color(0xAA21325E),
           brightness: Brightness.light),
-=======
-          scaffoldBackgroundColor: Color(0xAA21325E),
-          brightness: Brightness.light),
-        
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
       home: Scaffold(
         //backgroundColor: Colors.deepPurple[100],
         /* appBar: AppBar(
@@ -40,19 +34,11 @@ class Homepage extends StatelessWidget {
               height: double.infinity,
               decoration: BoxDecoration(
                   //gradient: LinearGradient(
-<<<<<<< HEAD
                   //begin: FractionalOffset.topCenter,
                   //end: FractionalOffset.bottomCenter,
                   //colors: [_accentColor, _accentColor],
                   // stops: const [0.0, 1.0])
                   ),
-=======
-                      //begin: FractionalOffset.topCenter,
-                      //end: FractionalOffset.bottomCenter,
-                      //colors: [_accentColor, _accentColor],
-                     // stops: const [0.0, 1.0])
-                     ),
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
@@ -86,7 +72,7 @@ class Homepage extends StatelessWidget {
                             ],
                           ),
                           child: Image.asset(
-                            'assets/logo2.png',
+                            'assets/icon3.png',
                             height: 500,
                           ),
                         ),
@@ -104,11 +90,7 @@ class Homepage extends StatelessWidget {
                         elevation: 5,
                         onPressed: () => Navigator.pushNamed(context, '/Quiz'),
 
-<<<<<<< HEAD
                         color: const Color(0xAA17EC0D),
-=======
-                        color: Color(0xAA17EC0D),
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
                         shape: const RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0))),
@@ -118,11 +100,7 @@ class Homepage extends StatelessWidget {
                         child: const Text(
                           'JOGAR',
                           style: TextStyle(
-<<<<<<< HEAD
                               color: Color.fromARGB(255, 224, 224, 224),
-=======
-                              color: Colors.white,
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
                               fontSize: 22.0,
                               fontWeight: FontWeight.bold),
                         ),
