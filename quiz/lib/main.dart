@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'homepage.dart';
 import 'quiz.dart';
 import 'resultados.dart';
-//import 'otpscreen2.dart';
+
 
 void main() {
   runApp(const MyApp());
