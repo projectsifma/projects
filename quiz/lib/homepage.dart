@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-//import 'package:quiz/quiz.dart';
+import 'package:quiz/myButton.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
 
-  //@override
+  @override
   //final Color _accentColor = const Color(0xAB4F1476);
   //final Color _purpleColor = Colors.deepPurple;
   Widget build(BuildContext context) {
@@ -46,14 +46,17 @@ class Homepage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Container(
+                    Expanded(flex: 1, child: Container()),
+                    Expanded(
+                      flex: 5,
                       //color: Colors.grey[300],
                       child: Center(
                         child: Container(
                           height: 200,
                           width: 200,
                           decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: Colors.deepPurple[50],
+                            //color: Colors.grey[300],
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(40)),
                             boxShadow: const [
@@ -79,8 +82,21 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
 
+                    Expanded(
+                      flex: 1,
+                      child: Center(
+                        child: MyButton(
+                            buttonText: 'Jogar',
+                            //color: Colors.deepPurple,
+                            color: const Color(0xAA17EC0D),
+                            textColor: Colors.white,
+                            buttonTopped: () =>
+                                Navigator.pushNamed(context, '/Quiz')),
+                      ),
+                    ),
+                    Expanded(flex: 1, child: Container())
                     //const Padding(padding: EdgeInsets.all(0)),
-                    Container(
+                    /*Container(
                       //width: double.infinity,
                       width: 325,
                       height: 50,
@@ -105,8 +121,9 @@ class Homepage extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
+
                       //),
-                    )
+                    )*/
                   ],
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/myButton.dart';
 
 class Argumentos {
   int acertos = 0;
@@ -32,35 +33,33 @@ class Resultados extends StatelessWidget {
           ),
         ),*/
         body: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(20.0),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 const Text('Resultado',
                     style: TextStyle(fontSize: 25, color: Colors.white)),
-                Text('Você acertou\n ${argumentos.acertos} de 10\n perguntas',
-                    style: const TextStyle(fontSize: 25, color: Colors.white)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                        'Você acertou\n ${argumentos.acertos} de 10\n perguntas',
+                        style:
+                            const TextStyle(fontSize: 25, color: Colors.white)),
+                  ],
+                ),
                 //const Padding(padding: EdgeInsets.all(0)),
-                SizedBox(
-                  width: 325,
-                  height: 50,
-                  child: MaterialButton(
-                    onPressed: () {
+                Center(
+                  child: MyButton(
+                    buttonTopped: () {
                       print('Pressionado');
                       Navigator.pushNamed(context, '/Quiz');
                       //Navigator.pop(context); //voltar
                     },
-                    color: Color(0xAA17EC0D),
-                    shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                    child: const Text(
-                      'JOGAR NOVAMENTE',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 22.0,
-                          fontWeight: FontWeight.bold),
-                    ),
+                    color: Colors.deepPurple,
+                    buttonText: 'Voltar ao jogo',
+                    textColor: Colors.white,
                   ),
                 )
               ],

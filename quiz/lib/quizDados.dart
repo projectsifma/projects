@@ -243,7 +243,7 @@ List quiz = [
   },
   {
     "Pergunta": 'Uma agitação barulhenta, tumulto ou alvoroço é chamada de:',
-    "Respostas": ["matinada", "dilema", "discernimento", "atrasamento"],
+    "Respostas": ["Matinada", "Dilema", "Discernimento", "Atrasamento"],
     "Alternativas_Corretas": 1,
   },
   {
