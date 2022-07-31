@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/buttonQuiz.dart';
+import 'buttonQuiz.dart';
 import 'resultados.dart';
 import 'quizDados.dart';
-import 'package:quiz/myButton.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
@@ -31,7 +30,7 @@ class _QuizState extends State<Quiz> {
       int i = 1;
 
       respostas.forEach((elemento) {
-        print(elemento);
+        //print(elemento);
         if (elemento == resCorreta) {
           altCorreta = i;
         }
@@ -116,7 +115,7 @@ class _QuizState extends State<Quiz> {
                             alignment: Alignment.centerRight,
                             child: Text('Pergunta $perguntaNumero/10',
                                 style: const TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 15,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold))),
                       ),
@@ -124,44 +123,47 @@ class _QuizState extends State<Quiz> {
                   ),
                   Expanded(
                     flex: 7,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                        width: double.infinity,
-                        color: const Color(0xAA3E497A),
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Container(
-                            //child: Align(
-                            //alignment: Alignment.topCenter,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Container(
+                          width: double.infinity,
+                          color: const Color(0xAA3E497A),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Container(
+                              //child: Align(
+                              //alignment: Alignment.topCenter,
 
-                            //child: Center(
-                            child: Center(
-                              child: Column(
-                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Center(
-                                    child: Text(
-                                      '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
-                                      style: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 22.0,
-                                          fontWeight: FontWeight.bold),
+                              //child: Center(
+                              child: Center(
+                                child: Column(
+                                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Center(
+                                      child: Text(
+                                        '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
+                                        style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 22.0,
+                                            fontWeight: FontWeight.bold),
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
+                              //),
+                              //),
                             ),
-                            //),
-                            //),
                           ),
                         ),
                       ),
                     ),
                   ),
                   Expanded(
-                    flex: 15,
+                    flex: 10,
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Container(
@@ -222,7 +224,7 @@ class _QuizState extends State<Quiz> {
                     ),
                   ),
                   Expanded(
-                    flex: 1,
+                    flex: 3,
                     child: Container(),
                   ),
                 ],

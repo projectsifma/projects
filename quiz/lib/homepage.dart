@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/myButton.dart';
+import 'myButton.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);

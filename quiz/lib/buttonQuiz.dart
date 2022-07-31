@@ -22,7 +22,7 @@ class ButtonQuiz extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           child: Container(
             alignment: Alignment.center,
-            height: 60,
+            height: 50,
             width: double.infinity,
             color: color,
             child: Padding(
@@ -33,7 +33,7 @@ class ButtonQuiz extends StatelessWidget {
                     buttonText,
                     style: TextStyle(
                         color: textColor,
-                        fontSize: 23,
+                        fontSize: 19,
                         fontWeight: FontWeight.bold),
                   ),
                 ),

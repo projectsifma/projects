@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/myButton.dart';
+import 'myButton.dart';
 
 class Argumentos {
   int acertos = 0;
