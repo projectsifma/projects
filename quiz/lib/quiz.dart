@@ -115,9 +115,9 @@ class _QuizState extends State<Quiz> {
                             alignment: Alignment.centerRight,
                             child: Text('Pergunta $perguntaNumero/10',
                                 style: const TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 17,
                                     color: Colors.white,
-                                    fontWeight: FontWeight.bold))),
+                                    fontWeight: FontWeight.w500))),
                       ),
                     ),
                   ),
@@ -147,8 +147,8 @@ class _QuizState extends State<Quiz> {
                                         '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
                                         style: const TextStyle(
                                             color: Colors.white,
-                                            fontSize: 22.0,
-                                            fontWeight: FontWeight.bold),
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.w700),
                                       ),
                                     ),
                                   ],

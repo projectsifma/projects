@@ -86,7 +86,7 @@ class Homepage extends StatelessWidget {
                       flex: 1,
                       child: Center(
                         child: MyButton(
-                            buttonText: 'Jogar',
+                            buttonText: 'Iniciar',
                             //color: Colors.deepPurple,
                             color: const Color(0xAA17EC0D),
                             textColor: Colors.white,

@@ -34,7 +34,7 @@ class ButtonQuiz extends StatelessWidget {
                     style: TextStyle(
                         color: textColor,
                         fontSize: 19,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.w500),
                   ),
                 ),
               ),

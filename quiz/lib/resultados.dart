@@ -57,8 +57,8 @@ class Resultados extends StatelessWidget {
                       Navigator.pushNamed(context, '/Quiz');
                       //Navigator.pop(context); //voltar
                     },
-                    color: Colors.deepPurple,
-                    buttonText: 'Voltar ao jogo',
+                    color: const Color(0xAA17EC0D),
+                    buttonText: 'Reiniciar',
                     textColor: Colors.white,
                   ),
                 )
