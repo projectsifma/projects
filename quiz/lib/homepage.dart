@@ -75,7 +75,7 @@ class Homepage extends StatelessWidget {
                             ],
                           ),
                           child: Image.asset(
-                            'assets/icon3.png',
+                            'assets/logo_quiz.png',
                             height: 500,
                           ),
                         ),
