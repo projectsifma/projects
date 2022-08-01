@@ -24,6 +24,7 @@ class MyButton extends StatelessWidget {
             child: Container(
               height: 50,
               width: 300,
+              margin: const EdgeInsets.symmetric(horizontal: 50),
               color: color,
               child: Center(
                   child: Text(
