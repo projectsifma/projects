@@ -52,13 +52,13 @@ class Homepage extends StatelessWidget {
                       //color: Colors.grey[300],
                       child: Center(
                         child: Container(
-                          height: 200,
-                          width: 200,
+                          height: 160,
+                          width: 160,
                           decoration: BoxDecoration(
                             color: Colors.deepPurple[50],
                             //color: Colors.grey[300],
                             borderRadius:
-                                const BorderRadius.all(Radius.circular(40)),
+                                const BorderRadius.all(Radius.circular(25)),
                             boxShadow: const [
                               BoxShadow(
                                 color: Color.fromARGB(170, 6, 8, 19),
