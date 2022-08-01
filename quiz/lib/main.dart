@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+import 'homePage.dart';
 import 'quiz.dart';
 import 'resultados.dart';
 //import 'otpscreen2.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

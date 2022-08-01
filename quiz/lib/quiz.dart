@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'buttonQuiz.dart';
 import 'resultados.dart';
 import 'quizDados.dart';
 
@@ -10,7 +11,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
- // final Color _accentColor = const Color(0xFF164CA2);
+  // final Color _accentColor = const Color(0xFF164CA2);
   int perguntaNumero = 1;
   int erros = 0;
   int acertos = 0;
@@ -29,7 +30,7 @@ class _QuizState extends State<Quiz> {
       int i = 1;
 
       respostas.forEach((elemento) {
-        print(elemento);
+        //print(elemento);
         if (elemento == resCorreta) {
           altCorreta = i;
         }
@@ -77,8 +78,7 @@ class _QuizState extends State<Quiz> {
           useMaterial3: true,
           //colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
           scaffoldBackgroundColor: const Color(0xAA21325E),
-          brightness: Brightness.light
-          ),
+          brightness: Brightness.light),
       home: Scaffold(
         /*appBar: AppBar(
           backgroundColor: const Color.fromARGB(221, 108, 253, 10),
@@ -102,7 +102,7 @@ class _QuizState extends State<Quiz> {
                       end: FractionalOffset.bottomCenter,
                       colors: [_accentColor.withOpacity(0.1), _accentColor],
                       stops: const [0.0, 1.0])*/
-                      ),
+                  ),
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -115,142 +115,107 @@ class _QuizState extends State<Quiz> {
                             alignment: Alignment.centerRight,
                             child: Text('Pergunta $perguntaNumero/10',
                                 style: const TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 17,
                                     color: Colors.white,
-                                    fontWeight: FontWeight.bold))),
+                                    fontWeight: FontWeight.w500))),
                       ),
                     ),
                   ),
                   Expanded(
                     flex: 7,
-                    child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Container(
-                      
-                      width: double.infinity,
-                      color: const Color(0xAA3E497A),
-                      child: Padding(
-                       
-                        padding: const EdgeInsets.all(10.0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
                         child: Container(
-                          //child: Align(
-                          //alignment: Alignment.topCenter,
+                          width: double.infinity,
+                          color: const Color(0xAA3E497A),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Container(
+                              //child: Align(
+                              //alignment: Alignment.topCenter,
 
-                          //child: Center(
-                          child: Center(
-                            child: Column(
-                              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Center(
-                                  child: Text(
-                                    '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
-                                    style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 22.0,
-                                        fontWeight: FontWeight.bold),
-                                  ),
+                              //child: Center(
+                              child: Center(
+                                child: Column(
+                                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Center(
+                                      child: Text(
+                                        '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
+                                        style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                              ),
+                              //),
+                              //),
                             ),
                           ),
-                          //),
-                          //),
                         ),
                       ),
                     ),
-                    ),
                   ),
                   Expanded(
-                    flex: 15,
+                    flex: 10,
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Container(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            SizedBox(
-                              width: double.infinity,
-                              height: 55,
-                              child: MaterialButton(
-                                onPressed: () {
+                            Center(
+                              child: ButtonQuiz(
+                                buttonTopped: () {
                                   print('Pressionado 01');
                                   respondeu(1);
                                 },
-                                color: Color(0xAA17EC0D),
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(10.0))),
-                                child: Text(
-                                  quiz[perguntaNumero - 1]['Respostas'][0],
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20.0,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                                color: Colors.deepPurple,
+                                buttonText: quiz[perguntaNumero - 1]
+                                    ['Respostas'][0],
+                                textColor: Colors.white,
                               ),
                             ),
-                            SizedBox(
-                              width: double.infinity,
-                              height: 55,
-                              child: MaterialButton(
-                                onPressed: () {
+                            Center(
+                              child: ButtonQuiz(
+                                buttonTopped: () {
                                   print('Pressionado 02');
                                   respondeu(2);
                                 },
-                                color: Color(0xAA17EC0D),
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(10.0))),
-                                child: Text(
-                                  quiz[perguntaNumero - 1]['Respostas'][1],
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20.0,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                                color: Colors.deepPurple,
+                                buttonText: quiz[perguntaNumero - 1]
+                                    ['Respostas'][1],
+                                textColor: Colors.white,
                               ),
                             ),
-                            SizedBox(
-                              width: double.infinity,
-                              height: 55,
-                              child: MaterialButton(
-                                onPressed: () {
+                            Center(
+                              child: ButtonQuiz(
+                                buttonTopped: () {
                                   print('Pressionado 03');
                                   respondeu(3);
                                 },
-                                color: Color(0xAA17EC0D),
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(10.0))),
-                                child: Text(
-                                  quiz[perguntaNumero - 1]['Respostas'][2],
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20.0,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                                color: Colors.deepPurple,
+                                buttonText: quiz[perguntaNumero - 1]
+                                    ['Respostas'][2],
+                                textColor: Colors.white,
                               ),
                             ),
-                            SizedBox(
-                              width: double.infinity,
-                              height: 55,
-                              child: MaterialButton(
-                                onPressed: () {
+                            Center(
+                              child: ButtonQuiz(
+                                buttonTopped: () {
                                   print('Pressionado 04');
                                   respondeu(4);
                                 },
-                                color: Color(0xAA17EC0D),
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(10.0))),
-                                child: Text(
-                                  quiz[perguntaNumero - 1]['Respostas'][3],
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20.0,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                                color: Colors.deepPurple,
+                                buttonText: quiz[perguntaNumero - 1]
+                                    ['Respostas'][3],
+                                textColor: Colors.white,
                               ),
                             ),
                           ],
@@ -259,7 +224,7 @@ class _QuizState extends State<Quiz> {
                     ),
                   ),
                   Expanded(
-                    flex: 2,
+                    flex: 3,
                     child: Container(),
                   ),
                 ],

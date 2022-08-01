@@ -81,10 +81,6 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
 
 
 # For information on the generic Dart part of this file, see the
@@ -101,16 +97,10 @@ flutter:
   # To add assets to your application, add an assets section, like this
   assets:
     - assets/logo2.png
-<<<<<<< HEAD
+
     - assets/iconQuiz.png
   #   - images/a_dot_ham.jpeg
-=======
-    #- assets/icon.jpeg
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
-
-  # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
