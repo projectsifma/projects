@@ -334,7 +334,7 @@ List quiz = [
   },
   {
     "Pergunta":
-        'Se uma pessoa age com parcimônia, significa que ela age de forma:',
+        "Se uma pessoa age com parcimônia, significa que ela age de forma:",
     "Respostas": ["estúpida", "rápida", "nervosa", "calma"],
     "Alternativas_Corretas": 4,
   },

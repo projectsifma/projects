@@ -122,7 +122,7 @@ class _QuizState extends State<Quiz> {
                     ),
                   ),
                   Expanded(
-                    flex: 7,
+                    flex: 6,
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: ClipRRect(
