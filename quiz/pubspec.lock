@@ -43,26 +43,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.16.0"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  cross_file:
-    dependency: transitive
-    description:
-      name: cross_file
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.3+1"
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
-  crypto:
-    dependency: transitive
-    description:
-      name: crypto
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.2"
-=======
->>>>>>> f2f3fbb20ea7a2eaebcd75663ad7c7c9c8d3df09
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -82,137 +62,25 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-<<<<<<< HEAD
-  flutter_launcher_icons:
-    dependency: "direct main"
-<<<<<<< HEAD
-=======
-    description:
-      name: flutter_launcher_icons
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.3"
-=======
->>>>>>> f2f3fbb20ea7a2eaebcd75663ad7c7c9c8d3df09
   flutter_lints:
     dependency: "direct dev"
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
     description:
-      name: flutter_launcher_icons
+      name: flutter_lints
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "0.9.3"
-=======
     version: "2.0.1"
-<<<<<<< HEAD
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
-  flutter_native_splash:
-    dependency: "direct main"
-    description:
-      name: flutter_native_splash
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.3.3"
-<<<<<<< HEAD
-=======
-  flutter_plugin_android_lifecycle:
-    dependency: transitive
-    description:
-      name: flutter_plugin_android_lifecycle
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.6"
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
-=======
->>>>>>> f2f3fbb20ea7a2eaebcd75663ad7c7c9c8d3df09
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
-<<<<<<< HEAD
-<<<<<<< HEAD
-  image:
-=======
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
-  http:
-    dependency: transitive
-    description:
-      name: http
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.13.4"
-  http_parser:
-    dependency: transitive
-    description:
-      name: http_parser
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.0.1"
-  image:
-    dependency: transitive
-    description:
-      name: image
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.3"
-  image_picker:
-    dependency: "direct main"
-    description:
-      name: image_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.8.5+3"
-  image_picker_android:
-    dependency: transitive
-    description:
-      name: image_picker_android
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.8.5+1"
-  image_picker_for_web:
-    dependency: transitive
-    description:
-      name: image_picker_for_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.8"
-  image_picker_ios:
-    dependency: transitive
-    description:
-      name: image_picker_ios
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.8.5+6"
-  image_picker_platform_interface:
-    dependency: transitive
-    description:
-      name: image_picker_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.5.0"
-  js:
-    dependency: transitive
-    description:
-      name: js
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.6.4"
-=======
->>>>>>> f2f3fbb20ea7a2eaebcd75663ad7c7c9c8d3df09
   lints:
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
     dependency: transitive
     description:
-      name: image
+      name: lints
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.3"
+    version: "2.0.0"
   matcher:
     dependency: transitive
     description:
@@ -241,26 +109,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.1"
-<<<<<<< HEAD
-  petitparser:
-    dependency: transitive
-    description:
-      name: petitparser
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.0.0"
-<<<<<<< HEAD
-=======
-  plugin_platform_interface:
-    dependency: transitive
-    description:
-      name: plugin_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.2"
->>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
-=======
->>>>>>> f2f3fbb20ea7a2eaebcd75663ad7c7c9c8d3df09
   sky_engine:
     dependency: transitive
     description: flutter
