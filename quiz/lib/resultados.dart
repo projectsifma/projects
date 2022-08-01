@@ -18,7 +18,7 @@ class Resultados extends StatelessWidget {
       title: 'Quiz',
       theme: ThemeData(
           useMaterial3: true,
-         // colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
+          // colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
           scaffoldBackgroundColor: const Color(0xAA21325E),
           brightness: Brightness.light),
       home: Scaffold(
@@ -37,9 +37,10 @@ class Resultados extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                const Text('Resultado', style: TextStyle(fontSize: 25, color: Colors.white)),
+                const Text('Resultado',
+                    style: TextStyle(fontSize: 25, color: Colors.white)),
                 Text('Você acertou\n ${argumentos.acertos} de 10\n perguntas',
-                    style: const TextStyle(fontSize: 25,  color: Colors.white)),
+                    style: const TextStyle(fontSize: 25, color: Colors.white)),
                 //const Padding(padding: EdgeInsets.all(0)),
                 SizedBox(
                   width: 325,

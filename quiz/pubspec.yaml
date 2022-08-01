@@ -30,12 +30,32 @@ dependencies:
   flutter:
     sdk: flutter
 
-
+ # flutter_native_splash: ^1.2.0
+ # flutter_launcher_icons: ^0.9.3
+  image_picker: ^0.8.2
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_launcher_icons: ^0.9.2
   flutter_native_splash: ^1.1.2
+
+
+flutter_native_splash: 
+  color: "#42a5f5"
+  image: "assets/icon3.png"
+  android: true
+  ios: true
+
+flutter_icons:
+  image_path: "assets/icon3.png"
+  ios: true
+  remove_alpha_ios: true
+  android: "launcher_icon"
+  adaptive_icon_background: "#42a5f9"
+  adaptive_icon_fireground: "assets/icon3.png"
+
+  
+  
 
 dev_dependencies:
   flutter_test:
@@ -43,16 +63,16 @@ dev_dependencies:
 
   
 
-flutter_icons:
-  android: "ic_launcher"
-  ios: true
-  image_path: "assets/iconQuiz.png"
+#flutter_icons:
+#  android: "ic_launcher"
+#  ios: true
+#  image_path: "assets/iconQuiz.png"
 
-flutter_native_splash:
-  color: "#F9D87B"
-  ios: true
-  android: true
-  image: "assets/iconQuiz.png"
+#flutter_native_splash:
+#  color: "#F9D87B"
+#  ios: true
+#  android: true
+#  image: "assets/iconQuiz.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -61,7 +81,10 @@ flutter_native_splash:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
 
 
 # For information on the generic Dart part of this file, see the
@@ -78,8 +101,12 @@ flutter:
   # To add assets to your application, add an assets section, like this
   assets:
     - assets/logo2.png
+<<<<<<< HEAD
     - assets/iconQuiz.png
   #   - images/a_dot_ham.jpeg
+=======
+    #- assets/icon.jpeg
+>>>>>>> b60b298b42b39aa9b3d32dfd90a1a589ff0e54b9
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
