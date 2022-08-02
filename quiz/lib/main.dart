@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         '/Quiz': (context) => const Quiz(),
         Resultados.routeName: (context) => const Resultados(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
