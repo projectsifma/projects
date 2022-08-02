@@ -20,21 +20,23 @@ class MyButton extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ClipRRect(
-            borderRadius: BorderRadius.circular(30),
-            child: Container(
-              height: 50,
-              width: 300,
-              //margin: const EdgeInsets.symmetric(horizontal: 50),
-              color: color,
-              child: Center(
-                  child: Text(
+          borderRadius: BorderRadius.circular(30),
+          child: Container(
+            height: 50,
+            width: 300,
+            //margin: const EdgeInsets.symmetric(horizontal: 50),
+            color: color,
+            child: Center(
+              child: Text(
                 buttonText,
                 style: TextStyle(
                     color: textColor,
                     fontSize: 20,
                     fontWeight: FontWeight.w700),
-              )),
-            )),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
