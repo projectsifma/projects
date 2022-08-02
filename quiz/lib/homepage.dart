@@ -6,17 +6,19 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xAA21325E),
+      //backgroundColor: const Color(0xAA21325E),
       body: Container(
         height: double.infinity,
         width: MediaQuery.of(context).size.width,
-        //decoration: BoxDecoration(
-        //gradient: LinearGradient(
-        //begin: FractionalOffset.topCenter,
-        //end: FractionalOffset.bottomCenter,
-        //colors: [_accentColor, _accentColor],
-        // stops: const [0.0, 1.0])
-        //),
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xff302b63), Color(0xff0f0c29)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        ),
         child: Center(
           child: Stack(
             fit: StackFit.expand,

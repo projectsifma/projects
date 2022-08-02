@@ -77,7 +77,7 @@ class _QuizState extends State<Quiz> {
       theme: ThemeData(
           useMaterial3: true,
           //colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
-          scaffoldBackgroundColor: const Color(0xAA21325E),
+          //scaffoldBackgroundColor: const Color(0xAA21325E),
           brightness: Brightness.light),
       home: Scaffold(
         /*appBar: AppBar(
@@ -96,13 +96,15 @@ class _QuizState extends State<Quiz> {
             Container(
               width: double.infinity,
               height: double.infinity,
-              decoration: BoxDecoration(
-                  /*gradient: LinearGradient(
-                      begin: FractionalOffset.topCenter,
-                      end: FractionalOffset.bottomCenter,
-                      colors: [_accentColor.withOpacity(0.1), _accentColor],
-                      stops: const [0.0, 1.0])*/
-                  ),
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xff302b63), Color(0xff0f0c29)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  stops: [0.0, 1.0],
+                  tileMode: TileMode.clamp,
+                ),
+              ),
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

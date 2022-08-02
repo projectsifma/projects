@@ -16,32 +16,31 @@ class ButtonQuiz extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: buttonTopped,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: Container(
-            alignment: Alignment.center,
-            height: 50,
-            width: double.infinity,
-            color: color,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                child: Center(
-                  child: Text(
-                    buttonText,
-                    style: TextStyle(
-                        color: textColor,
-                        fontSize: 19,
-                        fontWeight: FontWeight.w500),
-                  ),
-                ),
-              ),
+      //child: Padding(
+      //padding: const EdgeInsets.all(8.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: Container(
+          padding: const EdgeInsets.all(12.0),
+          //alignment: Alignment.center,
+          height: 50,
+          width: MediaQuery.of(context).size.width,
+          color: color,
+          //child: Padding(
+          //padding: const EdgeInsets.all(8.0),
+          ///child: Container(
+          child: Center(
+            child: Text(
+              buttonText,
+              style: TextStyle(
+                  color: textColor, fontSize: 19, fontWeight: FontWeight.w500),
             ),
           ),
+          //),
+          //),
         ),
       ),
+      //),
     );
   }
 }

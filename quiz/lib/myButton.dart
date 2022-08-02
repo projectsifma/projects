@@ -23,7 +23,7 @@ class MyButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           child: Container(
             height: 50,
-            width: 300,
+            width: 325,
             //margin: const EdgeInsets.symmetric(horizontal: 50),
             color: color,
             child: Center(
