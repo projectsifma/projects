@@ -72,15 +72,17 @@ class _QuizState extends State<Quiz> {
       });
     }
 
-    return MaterialApp(
-      title: 'Quiz',
-      theme: ThemeData(
-          useMaterial3: true,
-          //colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
-          //scaffoldBackgroundColor: const Color(0xAA21325E),
-          brightness: Brightness.light),
-      home: Scaffold(
-        /*appBar: AppBar(
+    return
+        //MaterialApp(
+        //title: 'Quiz',
+        //theme: ThemeData(
+        //useMaterial3: true,
+        //colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
+        //scaffoldBackgroundColor: const Color(0xAA21325E),
+        //brightness: Brightness.light),
+        //home:
+        Scaffold(
+      /*appBar: AppBar(
           backgroundColor: const Color.fromARGB(221, 108, 253, 10),
           title: const Center(
             child: Text(
@@ -90,140 +92,144 @@ class _QuizState extends State<Quiz> {
           ),
         ),*/
 
-        body: Stack(
-          fit: StackFit.expand,
-          children: [
-            Container(
-              width: double.infinity,
-              height: double.infinity,
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xff302b63), Color(0xff0f0c29)],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  stops: [0.0, 1.0],
-                  tileMode: TileMode.clamp,
-                ),
-              ),
-              child: Column(
+      body: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.all(20.0),
+          width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xff302b63), Color(0xff0f0c29)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              stops: [0.0, 1.0],
+              tileMode: TileMode.clamp,
+            ),
+          ),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              Column(
                 //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Expanded(
                     flex: 5,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Container(
-                        child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text('Pergunta $perguntaNumero/10',
-                                style: const TextStyle(
-                                    fontSize: 17,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500))),
-                      ),
+                    //child: Padding(
+                    //padding: const EdgeInsets.all(20.0),
+                    child: SizedBox(
+                      child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Text('Pergunta $perguntaNumero/10',
+                              style: const TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500))),
                     ),
+                    //),
                   ),
                   Expanded(
                     flex: 6,
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Container(
-                          width: double.infinity,
-                          color: const Color(0xAA3E497A),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Container(
-                              //child: Align(
-                              //alignment: Alignment.topCenter,
+                    //child: Padding(
+                    //padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        padding: const EdgeInsets.all(12.0),
+                        width: double.infinity,
+                        color: const Color(0xAA3E497A),
+                        //child: Padding(
 
-                              //child: Center(
-                              child: Center(
-                                child: Column(
-                                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Center(
-                                      child: Text(
-                                        '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
-                                        style: const TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.w700),
-                                      ),
-                                    ),
-                                  ],
+                        //child: Container(
+                        //child: Align(
+                        //alignment: Alignment.topCenter,
+
+                        //child: Center(
+                        child: Center(
+                          child: Column(
+                            // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            //crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Center(
+                                child: Text(
+                                  '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w700),
                                 ),
                               ),
-                              //),
-                              //),
-                            ),
+                            ],
                           ),
                         ),
+                        //),
+                        //),
+                        //),
+                        //),
+                        //),
                       ),
                     ),
                   ),
                   Expanded(
                     flex: 10,
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Center(
-                              child: ButtonQuiz(
-                                buttonTopped: () {
-                                  print('Pressionado 01');
-                                  respondeu(1);
-                                },
-                                color: Colors.deepPurple,
-                                buttonText: quiz[perguntaNumero - 1]
-                                    ['Respostas'][0],
-                                textColor: Colors.white,
-                              ),
+                    //child: Padding(
+                    //padding: const EdgeInsets.all(15.0),
+                    child: Container(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Center(
+                            child: ButtonQuiz(
+                              buttonTopped: () {
+                                print('Pressionado 01');
+                                respondeu(1);
+                              },
+                              color: Colors.deepPurple,
+                              buttonText: quiz[perguntaNumero - 1]['Respostas']
+                                  [0],
+                              textColor: Colors.white,
                             ),
-                            Center(
-                              child: ButtonQuiz(
-                                buttonTopped: () {
-                                  print('Pressionado 02');
-                                  respondeu(2);
-                                },
-                                color: Colors.deepPurple,
-                                buttonText: quiz[perguntaNumero - 1]
-                                    ['Respostas'][1],
-                                textColor: Colors.white,
-                              ),
+                          ),
+                          Center(
+                            child: ButtonQuiz(
+                              buttonTopped: () {
+                                print('Pressionado 02');
+                                respondeu(2);
+                              },
+                              color: Colors.deepPurple,
+                              buttonText: quiz[perguntaNumero - 1]['Respostas']
+                                  [1],
+                              textColor: Colors.white,
                             ),
-                            Center(
-                              child: ButtonQuiz(
-                                buttonTopped: () {
-                                  print('Pressionado 03');
-                                  respondeu(3);
-                                },
-                                color: Colors.deepPurple,
-                                buttonText: quiz[perguntaNumero - 1]
-                                    ['Respostas'][2],
-                                textColor: Colors.white,
-                              ),
+                          ),
+                          Center(
+                            child: ButtonQuiz(
+                              buttonTopped: () {
+                                print('Pressionado 03');
+                                respondeu(3);
+                              },
+                              color: Colors.deepPurple,
+                              buttonText: quiz[perguntaNumero - 1]['Respostas']
+                                  [2],
+                              textColor: Colors.white,
                             ),
-                            Center(
-                              child: ButtonQuiz(
-                                buttonTopped: () {
-                                  print('Pressionado 04');
-                                  respondeu(4);
-                                },
-                                color: Colors.deepPurple,
-                                buttonText: quiz[perguntaNumero - 1]
-                                    ['Respostas'][3],
-                                textColor: Colors.white,
-                              ),
+                          ),
+                          Center(
+                            child: ButtonQuiz(
+                              buttonTopped: () {
+                                print('Pressionado 04');
+                                respondeu(4);
+                              },
+                              color: Colors.deepPurple,
+                              buttonText: quiz[perguntaNumero - 1]['Respostas']
+                                  [3],
+                              textColor: Colors.white,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
+                    //),
                   ),
                   Expanded(
                     flex: 3,
@@ -231,10 +237,11 @@ class _QuizState extends State<Quiz> {
                   ),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
+    //);
   }
 }
