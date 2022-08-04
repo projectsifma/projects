@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'homePage.dart';
 import 'quiz.dart';
 import 'resultados.dart';
-//import 'otpscreen2.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
