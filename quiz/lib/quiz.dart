@@ -109,133 +109,127 @@ class _QuizState extends State<Quiz> {
           ),
           child: Column(
             //mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
                 width: size.width,
-                height: 140,
+                height: 110,
                 child: Align(
                     alignment: Alignment.centerRight,
                     child: Text('Pergunta $perguntaNumero/10',
                         style: const TextStyle(
                             fontSize: 17,
-                            color: Color.fromARGB(255, 237, 231, 246),
+                            color: Colors.white,
                             fontWeight: FontWeight.w500))),
               ),
               //),
 
-              Positioned(
-                bottom: 300,
-                left: 0,
-                right: 0,
-                //child: Padding(
-                //padding: const EdgeInsets.all(10.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
-                    padding: const EdgeInsets.all(12.0),
-                    width: size.width,
-                    height: 175,
-                    color: const Color(0xAA3E497A),
-                    //child: Padding(
+              //Expanded(
+              //flex: 6,
+              //child: Padding(
+              //padding: const EdgeInsets.all(10.0),
+              //child:
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  padding: const EdgeInsets.all(12.0),
+                  width: size.width,
+                  height: 180,
+                  color: const Color(0xAA3E497A),
+                  //child: Padding(
 
-                    //child: Container(
-                    //child: Align(
-                    //alignment: Alignment.topCenter,
+                  //child: Container(
+                  //child: Align(
+                  //alignment: Alignment.topCenter,
 
-                    //child: Center(
-                    child: Center(
-                      child: Column(
-                        // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        //crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Center(
-                            child: Text(
-                              '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.w700),
-                            ),
+                  //child: Center(
+                  child: Center(
+                    child: Column(
+                      // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      //crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.w700),
                           ),
-                        ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  //),
+                  //),
+                  //),
+                  //),
+                  //),
+                ),
+              ),
+              //),
+              //Expanded(
+              //flex: 10,
+              //child: Padding(
+              //padding: const EdgeInsets.all(15.0),
+              //child:
+              Container(
+                height: 15,
+              ),
+              Container(
+                width: size.width,
+                height: 320,
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Center(
+                      child: ButtonQuiz(
+                        buttonTopped: () {
+                          print('Pressionado 01');
+                          respondeu(1);
+                        },
+                        color: Colors.deepPurple,
+                        buttonText: quiz[perguntaNumero - 1]['Respostas'][0],
+                        textColor: Colors.white,
                       ),
                     ),
-                    //),
-                    //),
-                    //),
-                    //),
-                    //),
-                  ),
+                    Center(
+                      child: ButtonQuiz(
+                        buttonTopped: () {
+                          print('Pressionado 02');
+                          respondeu(2);
+                        },
+                        color: Colors.deepPurple,
+                        buttonText: quiz[perguntaNumero - 1]['Respostas'][1],
+                        textColor: Colors.white,
+                      ),
+                    ),
+                    Center(
+                      child: ButtonQuiz(
+                        buttonTopped: () {
+                          print('Pressionado 03');
+                          respondeu(3);
+                        },
+                        color: Colors.deepPurple,
+                        buttonText: quiz[perguntaNumero - 1]['Respostas'][2],
+                        textColor: Colors.white,
+                      ),
+                    ),
+                    Center(
+                      child: ButtonQuiz(
+                        buttonTopped: () {
+                          print('Pressionado 04');
+                          respondeu(4);
+                        },
+                        color: Colors.deepPurple,
+                        buttonText: quiz[perguntaNumero - 1]['Respostas'][3],
+                        textColor: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Positioned(
-                bottom: 50,
-                left: 0,
-                right: 0,
-                //flex: 10,
-                //child: Padding(
-                //padding: const EdgeInsets.all(15.0),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: size.width,
-                  height: 320,
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Center(
-                        child: ButtonQuiz(
-                          buttonTopped: () {
-                            print('Pressionado 01');
-                            respondeu(1);
-                          },
-                          color: Colors.deepPurple,
-                          buttonText: quiz[perguntaNumero - 1]['Respostas'][0],
-                          textColor: Colors.white,
-                        ),
-                      ),
-                      Center(
-                        child: ButtonQuiz(
-                          buttonTopped: () {
-                            print('Pressionado 02');
-                            respondeu(2);
-                          },
-                          color: Colors.deepPurple,
-                          buttonText: quiz[perguntaNumero - 1]['Respostas'][1],
-                          textColor: Colors.white,
-                        ),
-                      ),
-                      Center(
-                        child: ButtonQuiz(
-                          buttonTopped: () {
-                            print('Pressionado 03');
-                            respondeu(3);
-                          },
-                          color: Colors.deepPurple,
-                          buttonText: quiz[perguntaNumero - 1]['Respostas'][2],
-                          textColor: Colors.white,
-                        ),
-                      ),
-                      Center(
-                        child: ButtonQuiz(
-                          buttonTopped: () {
-                            print('Pressionado 04');
-                            respondeu(4);
-                          },
-                          color: Colors.deepPurple,
-                          buttonText: quiz[perguntaNumero - 1]['Respostas'][3],
-                          textColor: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                //),
-              ),
-              //Expanded(
-              //flex: 3,
-              //child: Container(),
+              //),
               //),
             ],
           ),
