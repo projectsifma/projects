@@ -18,12 +18,15 @@ class MyButton extends StatelessWidget {
     return GestureDetector(
       onTap: buttonTopped,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(40.0),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
           child: Container(
+            padding: const EdgeInsets.all(8.0),
             height: 50,
-            width: 325,
+            width: MediaQuery.of(context).size.width,
+
+            ///width: 325,
             //margin: const EdgeInsets.symmetric(horizontal: 50),
             color: color,
             child: Center(

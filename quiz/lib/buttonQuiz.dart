@@ -16,14 +16,12 @@ class ButtonQuiz extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: buttonTopped,
-      //child: Padding(
-      //padding: const EdgeInsets.all(8.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(15),
         child: Container(
           padding: const EdgeInsets.all(12.0),
           //alignment: Alignment.center,
-          height: 50,
+          height: 53,
           width: MediaQuery.of(context).size.width,
           color: color,
           //child: Padding(
@@ -40,7 +38,6 @@ class ButtonQuiz extends StatelessWidget {
           //),
         ),
       ),
-      //),
     );
   }
 }

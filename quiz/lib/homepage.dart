@@ -26,53 +26,55 @@ class Homepage extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 Positioned(
-                  bottom: 385,
+                  bottom: 350,
                   left: 0,
                   right: 0,
-                  child: Center(
-                    child: Container(
-                      height: 160,
-                      width: 160,
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple[50],
-                        //color: Colors.grey[300],
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(25)),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color.fromARGB(170, 6, 8, 19),
-                            offset: Offset(5.0, 5.0),
-                            blurRadius: 15,
-                            spreadRadius: 1,
-                          ),
-                          BoxShadow(
-                            color: Color.fromARGB(255, 60, 52, 82),
-                            offset: Offset(-5.0, -5.0),
-                            blurRadius: 15,
-                            spreadRadius: 1,
-                          ),
-                        ],
+                  //child: Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 160,
+                        width: 160,
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple[50],
+                          //color: Colors.grey[300],
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(25)),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Color.fromARGB(170, 6, 8, 19),
+                              offset: Offset(5.0, 5.0),
+                              blurRadius: 15,
+                              spreadRadius: 1,
+                            ),
+                            BoxShadow(
+                              color: Color.fromARGB(255, 60, 52, 82),
+                              offset: Offset(-5.0, -5.0),
+                              blurRadius: 15,
+                              spreadRadius: 1,
+                            ),
+                          ],
+                        ),
+                        child: Image.asset(
+                          'assets/logo_quiz.png',
+                          height: 100,
+                        ),
                       ),
-                      child: Image.asset(
-                        'assets/logo_quiz.png',
-                        height: 500,
-                      ),
-                    ),
+                    ],
                   ),
+                  //),
                 ),
                 Positioned(
-                  bottom: 135,
+                  bottom: 100,
                   left: 0,
                   right: 0,
-                  child: Center(
-                    child: MyButton(
-                        buttonText: 'Iniciar',
-                        //color: Colors.deepPurple,
-                        color: const Color(0xAA17EC0D),
-                        textColor: Colors.white,
-                        buttonTopped: () =>
-                            Navigator.pushNamed(context, '/Quiz')),
-                  ),
+                  child: MyButton(
+                      buttonText: 'Iniciar',
+                      //color: Colors.deepPurple,
+                      color: const Color(0xAA17EC0D),
+                      textColor: Colors.white,
+                      buttonTopped: () =>
+                          Navigator.pushNamed(context, '/Quiz')),
                 ),
               ],
             ),
