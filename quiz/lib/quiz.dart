@@ -178,7 +178,7 @@ class _QuizState extends State<Quiz> {
               Container(
                 width: size.width,
                 height: 320,
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(5.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
