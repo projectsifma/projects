@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz4/topContainer.dart';
+import 'button2.dart';
 import 'buttonQuiz.dart';
 import 'resultados.dart';
 import 'quizDados.dart';
@@ -117,7 +118,8 @@ class _QuizState extends State<Quiz> {
                 padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0.0),
                 child: Align(
                     alignment: Alignment.center,
-                    child: Text('Pergunta $perguntaNumero/10',
+                    child: Text(
+                        /*Pergunta $perguntaNumero/10*/ 'Será implementado Temporizador',
                         style: const TextStyle(
                             fontSize: 17,
                             color: Colors.white,
@@ -132,7 +134,7 @@ class _QuizState extends State<Quiz> {
               const SizedBox(height: 23.0),
               Padding(
                 padding: const EdgeInsets.all(18.0),
-                child: SizedBox(
+                child: Container(
                   child: Column(children: [
                     //Padding(
                     //padding: const EdgeInsets.all(8.0),
@@ -140,7 +142,7 @@ class _QuizState extends State<Quiz> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Container(
-                        padding: const EdgeInsets.all(12.0),
+                        padding: const EdgeInsets.all(10.0),
                         width: size.width,
                         height: 180,
                         color: Colors.white,
@@ -154,15 +156,24 @@ class _QuizState extends State<Quiz> {
                         //child: Center(
                         child: Center(
                           child: Column(
-                            // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            //mainAxisAlignment: MainAxisAlignment.center,
                             //crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const MyButton2(buttonText: 'Perguntas:'),
+                                  MyButton2(
+                                      buttonText: ' $perguntaNumero / 10'),
+                                ],
+                              ),
                               Center(
                                 child: Text(
                                   '\n\n${quiz[perguntaNumero - 1]['Pergunta']}',
                                   style: const TextStyle(
                                       color: Color(0xff302b63),
-                                      fontSize: 20.0,
+                                      fontSize: 18.0,
                                       fontWeight: FontWeight.w700),
                                 ),
                               ),

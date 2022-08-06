@@ -18,7 +18,7 @@ class TopContainer extends StatelessWidget {
           padding != null ? padding : EdgeInsets.symmetric(horizontal: 20.0),
       decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xff4B0082), Color(0xff4B0082)],
+            colors: [Color(0xAA17EC0D), Color(0xAA17EC0D)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             stops: [0.0, 0.9],
