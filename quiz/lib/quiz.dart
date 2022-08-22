@@ -71,7 +71,7 @@ class _QuizState extends State<Quiz> {
         } else {
           perguntaNumero++;
         }
-      });
+      },);
     }
 
     Size size = MediaQuery.of(context).size;

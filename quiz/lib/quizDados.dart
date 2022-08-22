@@ -106,7 +106,7 @@ List quiz = [
   },
   {
     "Pergunta": "Quanto tempo o vidro demora para se decompor?",
-    "Respostas": ["500 anos", "1000 anos", " tempo indeterminado", "4000 anos"],
+    "Respostas": ["500 anos", "1000 anos", " Tempo indeterminado", "4000 anos"],
     "Alternativas_Corretas": 3,
   },
   {
@@ -116,128 +116,128 @@ List quiz = [
   },
   {
     "Pergunta": "Qual é o plural de chapéu?",
-    "Respostas": ["chapéus", "chapeletas", "cartolas", "chapéis"],
+    "Respostas": ["Chapéus", "Chapeletas", "Cartolas", "Chapéis"],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": "Compatriota é aquele indivíduo que...",
     "Respostas": [
-      "tem parentes no exterior",
-      "ama a pátria acima de tudo",
-      "se origina da mesma terra que outro",
-      "realiza compras em diferentes países"
+      "Tem parentes no exterior",
+      "Ama a pátria acima de tudo",
+      "Se origina da mesma terra que outro",
+      "Realiza compras em diferentes países"
     ],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": 'Qual dos advérbios abaixo não existe?',
-    "Respostas": ["bastante", "quão", "menas", "tanto"],
+    "Respostas": ["Bastante", "Quão", "Menas", "Tanto"],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": "Uma pessoa eclética é aquela que...",
     "Respostas": [
-      "aprecia diferentes estilos, métodos, etc",
-      "gosta de apenas um tipo de música",
-      "viajou para vários países",
-      "tem medo de elevador"
+      "Aprecia diferentes estilos, métodos, etc",
+      "Gosta de apenas um tipo de música",
+      "Viajou para vários países",
+      "Tem medo de elevador"
     ],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": "Quantas sílabas tem a palavra fisioterapeuta?",
-    "Respostas": ["cinco", "seis", "sete", "oito"],
+    "Respostas": ["Cinco", "Seis", "Sete", "Oito"],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta":
         'A primeira frase do hino brasileiro diz: "Ouviram do Ipiranga às margens plácidas". O que significa "plácidas"?',
-    "Respostas": ["frias", "calmas", "fundas", "rasas"],
+    "Respostas": ["Frias", "Calmas", "Fundas", "Rasas"],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'A palavra "volúpia" está relacionada com:',
-    "Respostas": ["luxúria", "doença", "pobreza", "nervosismo"],
+    "Respostas": ["Luxúria", "Doença", "Pobreza", "Nervosismo"],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'O verbo "aferir" está relacionado a:',
-    "Respostas": ["capacitar", "medir", "machucar", "manchar"],
+    "Respostas": ["Capacitar", "Medir", "Machucar", "Manchar"],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'A palavra "latifúndio" está relacionada com:',
     "Respostas": [
-      "coordenadas geográficas de um local",
-      "abrigo para cães",
-      "produtos de derivados do leite",
-      "grande área rural"
+      "Coordenadas geográficas de um local",
+      "Abrigo para cães",
+      "Produtos de derivados do leite",
+      "Grande área rural"
     ],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'Incumbência significa...',
     "Respostas": [
-      "descascar maçãs",
-      "conferir responsabilidade a alguém",
-      "interferir nos problemas dos outros",
-      "uma doença pulmonar"
+      "Descascar maçãs",
+      "Conferir responsabilidade a alguém",
+      "Interferir nos problemas dos outros",
+      "Uma doença pulmonar"
     ],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'Qual das palavras abaixo é sinônimo de banal?',
-    "Respostas": ["trivial", "semanal", "bananal", "sensacional"],
+    "Respostas": ["Trivial", "Semanal", "Bananal", "Sensacional"],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'O antônimo de agitado é...',
-    "Respostas": ["tranquilo", "afobado", "atrasado", "bacana"],
+    "Respostas": ["Tranquilo", "Afobado", "Atrasado", "Bacana"],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'Pejorativo é algo que pode...',
-    "Respostas": ["cair", "alegrar", "crescer", "ofender"],
+    "Respostas": ["Cair", "Alegrar", "Crescer", "Ofender"],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'Qual dos verbos abaixo está no passado?',
-    "Respostas": ["voltará", "olhei", "sei", "andarei"],
+    "Respostas": ["Voltará", "Olhei", "Sei", "Andarei"],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'Qual das palavras abaixo é um adjetivo?',
-    "Respostas": ["geada", "galeto", "gordo", "gelatina"],
+    "Respostas": ["Geada", "Galeto", "Gordo", "Gelatina"],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": 'Qual a forma correta de escrita da palavra abaixo?',
-    "Respostas": ["exçessão", "exçeção", "exceção", "excessão"],
+    "Respostas": ["Exçessão", "Exçeção", "Exceção", "Excessão"],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta":
         'Uma loja que vende itens necessários à costura ou ao bordado (botão, linha, tecido, etc) é uma loja de...',
-    "Respostas": ["filatelia", "aviamentos", "relíquias", "artesanato"],
+    "Respostas": ["Filatelia", "Aviamentos", "Relíquias", "Artesanato"],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'A palavra "anistia" tem relação com:',
-    "Respostas": ["perdão", "medicina", "estrangeiros", "independência"],
+    "Respostas": ["Perdão", "Medicina", "Estrangeiros", "Independência"],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'Algo frágil, delicado ou sensível pode ser chamado de:',
-    "Respostas": ["melindre", "imutável", "engenho", "mazela"],
+    "Respostas": ["Melindre", "Imutável", "Engenho", "Mazela"],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'Jargão significa:',
     "Respostas": [
-      "um recipiente",
-      "uma gíria profissional",
-      "um farsante, impostor",
-      "uma medida de comprimento"
+      "Um recipiente",
+      "Uma gíria profissional",
+      "Um farsante, impostor",
+      "Uma medida de comprimento"
     ],
     "Alternativas_Corretas": 2,
   },
@@ -249,208 +249,208 @@ List quiz = [
   {
     "Pergunta": 'O que é um hiato?',
     "Respostas": [
-      "embarcação utilizada para lazer no mar",
-      "um hotel famoso em Paris",
-      "duas consoantes iguais na mesma palavra",
-      "duas vogais contíguas que pertencem a sílabas diferentes"
+      "Embarcação utilizada para lazer no mar",
+      "Um hotel famoso em Paris",
+      "Duas consoantes iguais na mesma palavra",
+      "Duas vogais contíguas que pertencem a sílabas diferentes"
     ],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'Qual a cor abaixo que também pode ser substantivo?',
-    "Respostas": ["laranja", "branco", "amarelo", "verde"],
+    "Respostas": ["Laranja", "Branco", "Amarelo", "Verde"],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'Se uma pessoa fez algo a esmo, significa que ela...',
     "Respostas": [
-      "fez um trabalho espetacular",
-      "praticou uma atividade a cavalo",
-      "fez algo sem certeza, sem exatidão",
-      "trabalhou em um local escuro"
+      "Fez um trabalho espetacular",
+      "Praticou uma atividade a cavalo",
+      "Fez algo sem certeza, sem exatidão",
+      "Trabalhou em um local escuro"
     ],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": 'Como é chamado aquele que é ou foi sete vezes campeão?',
-    "Respostas": ["hexacampeão", "heptacampeão", "pentacampeão", "decacampeão"],
+    "Respostas": ["Hexacampeão", "Heptacampeão", "Pentacampeão", "Decacampeão"],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'Meu filho está _________ com os brinquedos dele.',
-    "Respostas": ["entertido", "intretido", "intertido", "entretido"],
+    "Respostas": ["Entertido", "Intretido", "Intertido", "Entretido"],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'O coletivo de camelos é...',
-    "Respostas": ["alcateia", "cáfila", "matilha", "miríade"],
+    "Respostas": ["Alcateia", "Cáfila", "Matilha", "Miríade"],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'A palavra "escrúpulo" diz respeito...',
     "Respostas": [
-      "a um filme de vampiros",
-      "a uma noite de lua cheia",
-      "ao caráter íntegro de uma pessoa",
-      "a um tempero da culinária francesa"
+      "A um filme de vampiros",
+      "A uma noite de lua cheia",
+      "Ao caráter íntegro de uma pessoa",
+      "A um tempero da culinária francesa"
     ],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": 'Antagonismo significa:',
     "Respostas": [
-      "rivalidade, oposição",
-      "ser egoísta",
-      "criar agonia nas pessoas",
-      "criar antas"
+      "Rivalidade, oposição",
+      "Ser egoísta",
+      "Criar agonia nas pessoas",
+      "Criar antas"
     ],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'O que significa preleção?',
     "Respostas": [
-      "estudo para uma prova",
-      "plantação de sementes",
-      "prévia dos resultados de uma eleição",
-      "discurso antes da realização de uma tarefa"
+      "Estudo para uma prova",
+      "Plantação de sementes",
+      "Prévia dos resultados de uma eleição",
+      "Discurso antes da realização de uma tarefa"
     ],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'Um evento dedicado à caridade é chamado de evento...',
-    "Respostas": ["beneficiente", "eficiente", "beneficente", "descendente"],
+    "Respostas": ["Beneficiente", "Eficiente", "Beneficente", "Descendente"],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta":
         'Quais as palavras abaixo estão relacionadas com o substantivo "antro"?',
     "Respostas": [
-      "céu, lua",
-      "animal, vegetal",
-      "gruta, caverna",
-      "amizade, carinho"
+      "Céu, lua",
+      "Animal, vegetal",
+      "Gruta, caverna",
+      "Amizade, carinho"
     ],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta":
         "Se uma pessoa age com parcimônia, significa que ela age de forma:",
-    "Respostas": ["estúpida", "rápida", "nervosa", "calma"],
+    "Respostas": ["Estúpida", "Rápida", "Nervosa", "Calma"],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'Resignado é o mesmo que...',
-    "Respostas": ["conformado", "contornado", "confiado", "confinado"],
+    "Respostas": ["Conformado", "Contornado", "Confiado", "Confinado"],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'O cordão usado nos tênis é o...',
-    "Respostas": ["cardaço", "cardarço", "cadarço", "cadarso"],
+    "Respostas": ["Cardaço", "Cardarço", "Cadarço", "Cadarso"],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta":
         'Quais das palavras abaixo estão relacionadas à palavra "trejeito"?',
     "Respostas": [
-      "movimento, gesticulação",
-      "sinceridade, honestidade",
-      "mentira, falsidade",
-      "calma, tranquilidade"
+      "Movimento, gesticulação",
+      "Sinceridade, honestidade",
+      "Mentira, falsidade",
+      "Calma, tranquilidade"
     ],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'Qual das palavras abaixo apresenta erro de grafia?',
-    "Respostas": ["xingar", "enxugar", "mecher", "encher"],
+    "Respostas": ["Xingar", "Enxugar", "Mecher", "Encher"],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": 'O que é paroxítona?',
     "Respostas": [
-      "1palavra que possui 4 sílabas",
-      "palavra cujo acento tônico encontra-se na sua penúltima sílaba",
-      "um tipo de árvore",
-      "1uma substância química"
+      "Palavra que possui 4 sílabas",
+      "Palavra cujo acento tônico encontra-se na sua penúltima sílaba",
+      "Um tipo de árvore",
+      "Uma substância química"
     ],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'Na frase "João passou no concurso" o sujeito é:',
-    "Respostas": ["inteligente", "competente", "aprovado", "João"],
+    "Respostas": ["Inteligente", "Competente", "Aprovado", "João"],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'Xenofobia consiste em uma aversão a...',
-    "Respostas": ["altura", "locais fechados", "estrangeiros", "avião"],
+    "Respostas": ["Altura", "Locais Fechados", "Estrangeiros", "Avião"],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": 'O verbo "deturpar" pode ser entendido como:',
     "Respostas": [
-      "viajar para o exterior",
-      "explorar a gramática da língua portuguesa",
-      "interpretar mal o sentido de algo",
-      "enviar um estrangeiro de volta ao seu país"
+      "Viajar para o exterior",
+      "Explorar a gramática da língua portuguesa",
+      "Interpretar mal o sentido de algo",
+      "Enviar um estrangeiro de volta ao seu país"
     ],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": 'Dogma é um ponto fundamental para...',
     "Respostas": [
-      "a criação de cachorros",
-      "preservação do meio ambiente",
-      "a preservação da saúde",
-      "uma doutrina religiosa"
+      "A criação de cachorros",
+      "Preservação do meio ambiente",
+      "A preservação da saúde",
+      "Uma doutrina religiosa"
     ],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'Se as mangas de uma camisa puíram, significa que elas...',
     "Respostas": [
-      "gastaram-se devido às roçaduras do uso",
-      "sujaram",
-      "encolheram",
-      "alargaram"
+      "Gastaram-se devido às roçaduras do uso",
+      "Sujaram",
+      "Encolheram",
+      "Alargaram"
     ],
     "Alternativas_Corretas": 1,
   },
   {
     "Pergunta": 'Gíria é...',
     "Respostas": [
-      "fêmea do sapo",
-      "língua especial de um grupo social ou etário",
-      "brinquedo giratório",
-      "tipo de pássaro"
+      "Fêmea do sapo",
+      "Língua especial de um grupo social ou etário",
+      "Brinquedo giratório",
+      "Tipo de pássaro"
     ],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'Empatia é...',
     "Respostas": [
-      "um tipo de hepatite",
-      "um jogo que termina empatado",
-      "aptidão para se identificar com o outro",
-      "o contrário de simpatia"
+      "Um tipo de hepatite",
+      "Um jogo que termina empatado",
+      "Aptidão para se identificar com o outro",
+      "O contrário de simpatia"
     ],
     "Alternativas_Corretas": 3,
   },
   {
     "Pergunta": 'Aloprado é o mesmo que:',
-    "Respostas": ["engraçado", "lesionado", "contente", "adoidado"],
+    "Respostas": ["Engraçado", "Lesionado", "Contente", "Adoidado"],
     "Alternativas_Corretas": 4,
   },
   {
     "Pergunta": 'Pandemônio tem relação com:',
-    "Respostas": ["fabricação de pães", "confusão", "epidemia", "diabo"],
+    "Respostas": ["Fabricação de pães", "Confusão", "Epidemia", "Diabo"],
     "Alternativas_Corretas": 2,
   },
   {
     "Pergunta": 'O que é uma contingência?',
     "Respostas": [
-      "um fato imprevisível, eventual",
-      "algo que indica continuação",
-      "um comportamento muito contido",
-      "uma saudação militar"
+      "Um fato imprevisível, eventual",
+      "Algo que indica continuação",
+      "Um comportamento muito contido",
+      "Uma saudação militar"
     ],
     "Alternativas_Corretas": 1,
   }
