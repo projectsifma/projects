@@ -1,36 +1,20 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TopContainer extends StatelessWidget {
-  final double height;
-  final double width;
-  final Widget child;
-  final EdgeInsets padding;
-  const TopContainer(
-      {required this.height,
-      required this.width,
-      required this.child,
-      required this.padding});
+class Countdown extends AnimatedWidget {
+  Countdown({Key? key, required this.animation})
+      : super(key: key, listenable: animation);
+  Animation<int> animation;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding:
-          padding != null ? padding : EdgeInsets.symmetric(horizontal: 20.0),
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xAA17EC0D), Color(0xAA17EC0D)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            stops: [0.0, 0.9],
-            tileMode: TileMode.clamp,
-          ),
-          borderRadius: BorderRadius.only(
-            bottomRight: Radius.circular(30.0),
-            bottomLeft: Radius.circular(30.0),
-          )),
-      height: height,
-      width: width,
-      child: child,
+    Duration clockTimer = Duration(seconds: animation.value);
+    var timerText = '${clockTimer.inMinutes.remainder(60).toString()} : '
+        '${(clockTimer.inSeconds.remainder(60) % 60).toString().padLeft(2, '0')}';
+
+    return Text(
+      '${timerText}',
+      style: TextStyle(fontSize: 40, color: Theme.of(context).primaryColor),
     );
   }
 }
