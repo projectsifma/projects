@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'myButton.dart';
-
+import '../widgets/myButton.dart';
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
   @override

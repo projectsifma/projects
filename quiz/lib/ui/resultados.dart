@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'myButton.dart';
+import '../widgets/myButton.dart';
 
 class Argumentos {
   int acertos = 0;
@@ -8,10 +8,8 @@ class Argumentos {
 
 class Resultados extends StatelessWidget {
   static const routeName = '/Resultados';
-  //final int acertos;
 
-  const Resultados({/*required this.acertos,*/ Key? key}) : super(key: key);
-
+  const Resultados({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final argumentos = ModalRoute.of(context)?.settings.arguments as Argumentos;
@@ -23,20 +21,7 @@ class Resultados extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0xAA21325E),
           brightness: Brightness.light),
       home: Scaffold(
-        /*appBar: AppBar(
-          backgroundColor: const Color.fromARGB(197, 96, 219, 14),
-          title: const Center(
-            child: Text(
-              'Quiz Português',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ),*/
-        body:
-            // Padding(
-            //padding: const EdgeInsets.all(20.0),
-            //child:
-            Center(
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
@@ -50,7 +35,6 @@ class Resultados extends StatelessWidget {
                           const TextStyle(fontSize: 25, color: Colors.white)),
                 ],
               ),
-              //const Padding(padding: EdgeInsets.all(0)),
               Center(
                 child: MyButton(
                   buttonTopped: () {
