@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz4/models/list.dart';
+import '../ui/quiz.dart';
 
 class Countdown extends AnimatedWidget {
   Countdown({Key? key, required this.animation})
@@ -11,7 +13,13 @@ class Countdown extends AnimatedWidget {
     Duration clockTimer = Duration(seconds: animation.value);
     var timerText = '${clockTimer.inMinutes.remainder(60).toString()} : '
         '${(clockTimer.inSeconds.remainder(60) % 60).toString().padLeft(2, '0')}';
-
+/*
+    if (timerText == 0) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return Alist();
+      }));
+    }
+*/
     return Text(
       '${timerText}',
       style: TextStyle(fontSize: 40, color: Theme.of(context).primaryColor),

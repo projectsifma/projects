@@ -6,7 +6,7 @@ class Argumentos {
   Argumentos(this.acertos);
 }
 
-class Resultados extends StatelessWidget {
+class Resultados extends StatelessWidget{
   static const routeName = '/Resultados';
 
   const Resultados({Key? key}) : super(key: key);

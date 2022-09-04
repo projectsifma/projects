@@ -8,6 +8,7 @@ import '../widgets/topContainer.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
+  static const routeName = '/Quiz';
 
   @override
   State<Quiz> createState() => _QuizState();
@@ -20,26 +21,26 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
   int acertos = 0;
 
   late AnimationController _controller;
-
+/*
   @override
   void dispose() {
     // TODO: implement dispose
-    super.dispose();
+    //super.dispose();
     if (_controller.isAnimating || _controller.isCompleted)
       _controller.dispose();
     super.dispose();
   }
-
-  @override
+*/
+      @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 30));
+        AnimationController(vsync: this, duration: Duration(seconds: 3));
     _controller.addListener(() {
       if (_controller.isCompleted) {
-        Navigator.pop(context);
-        //Navigator.pushNamed(context, "/testResult");
+        Navigator.pushNamed(context, '/Resultados',
+            arguments: Argumentos(acertos));
       }
     });
     _controller.forward(); //Start
@@ -239,10 +240,15 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                           Center(
                             child: ButtonQuiz(
                               buttonTopped: () {
+                                onPressed:
+                                () {
+                                  Navigator.pushNamed(context, '/Resultados',
+                                  arguments: Argumentos(acertos));
+                                };
                                 print('Pressionado 01');
                                 respondeu(1);
                               },
-                              color: Colors.orange,
+                              color: Colors.blue,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
                                   [0],
                               textColor: Colors.white,
