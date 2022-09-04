@@ -15,32 +15,28 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
-  // final Color _accentColor = const Color(0xFF164CA2);
+
   int perguntaNumero = 1;
   int erros = 0;
   int acertos = 0;
 
   late AnimationController _controller;
-/*
+
   @override
   void dispose() {
-    // TODO: implement dispose
-    //super.dispose();
     if (_controller.isAnimating || _controller.isCompleted)
       _controller.dispose();
     super.dispose();
   }
-*/
-      @override
+
+  @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _controller =
         AnimationController(vsync: this, duration: Duration(seconds: 3));
     _controller.addListener(() {
       if (_controller.isCompleted) {
-        Navigator.pushNamed(context, '/Resultados',
-            arguments: Argumentos(acertos));
+        Navigator.pushNamed(context, '/Resultados');
       }
     });
     _controller.forward(); //Start
@@ -61,7 +57,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
       int i = 1;
 
       respostas.forEach((elemento) {
-        //print(elemento);
         if (elemento == resCorreta) {
           altCorreta = i;
         }
@@ -70,15 +65,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
       elemento['Alternativas_Corretas'] = altCorreta;
     });
 
-    /*for (int i = 10; i <= 20; i++) {
-      quiz.add({
-        "Pergunta": "Pergunta $i?",
-        "Respostas": ["Resposta 1", "Resposta 2", "Resposta 3", "Resposta 4"],
-        "Alternativas_Corretas": 1,
-      });
-    }*/
     print('Dados Quiz');
-    //print(quiz);
 
     void respondeu(int respostaNumero) {
       setState(() {
@@ -105,25 +92,8 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
 
     Size size = MediaQuery.of(context).size;
     return
-        //MaterialApp(
-        //title: 'Quiz',
-        //theme: ThemeData(
-        //useMaterial3: true,
-        //colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
-        //scaffoldBackgroundColor: const Color(0xAA21325E),
-        //brightness: Brightness.light),
-        //home:
-        Scaffold(
-      /*appBar: AppBar(
-          backgroundColor: const Color.fromARGB(221, 108, 253, 10),
-          title: const Center(
-            child: Text(
-              'Quiz Português',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ),*/
-
+      
+    Scaffold(
       body: SafeArea(
         child: Container(
           //padding: const EdgeInsets.all(18.0),
@@ -139,37 +109,15 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
             ),
           ),
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              /*TopContainer(
-                height: 130,
-                width: size.width,
-                padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0.0),
-                child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                        /*Pergunta $perguntaNumero/10*/ 'Será implementado Temporizador',
-                        style: const TextStyle(
-                            fontSize: 17,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500))),
-              ),*/
               Countdown(
-                  animation: StepTween(begin: 30, end: 0).animate(_controller)),
-              //),
-              //Expanded(
-              //flex: 6,
-              //child: Padding(
-              //padding: const EdgeInsets.all(10.0),
-              //child:
+                  animation: StepTween(begin: 5, end: 0).animate(_controller)),
+             
               const SizedBox(height: 23.0),
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(
                   child: Column(children: [
-                    //Padding(
-                    //padding: const EdgeInsets.all(8.0),
-                    //child:
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Container(
@@ -177,18 +125,9 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                         width: size.width,
                         height: 180,
                         color: Colors.white,
-                        //const Color(0xAA3E497A),
-                        //child: Padding(
 
-                        //child: Container(
-                        //child: Align(
-                        //alignment: Alignment.topCenter,
-
-                        //child: Center(
                         child: Center(
                           child: Column(
-                            //mainAxisAlignment: MainAxisAlignment.center,
-                            //crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Row(
                                 mainAxisAlignment:
@@ -211,44 +150,22 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                             ],
                           ),
                         ),
-                        //),
-                        //),
-                        //),
-                        //),
-                        //),
                       ),
                     ),
-                    //),
-                    //),
-                    //Expanded(
-                    //flex: 10,
-                    //child: Padding(
-                    //padding: const EdgeInsets.all(15.0),
-                    //child:
-
-                    //Padding(
-                    //padding: const EdgeInsets.all(1.0),
-                    //child:
                     const SizedBox(height: 20.0),
                     SizedBox(
                       width: size.width,
                       height: 275,
-                      //padding: const EdgeInsets.all(5.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Center(
                             child: ButtonQuiz(
                               buttonTopped: () {
-                                onPressed:
-                                () {
-                                  Navigator.pushNamed(context, '/Resultados',
-                                  arguments: Argumentos(acertos));
-                                };
                                 print('Pressionado 01');
                                 respondeu(1);
                               },
-                              color: Colors.blue,
+                              color: Colors.orange,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
                                   [0],
                               textColor: Colors.white,
@@ -258,7 +175,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                             child: ButtonQuiz(
                               buttonTopped: () {
                                 print('Pressionado 02');
-                                respondeu(2);
                               },
                               color: Colors.orange,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
@@ -293,17 +209,13 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                         ],
                       ),
                     ),
-
-                    ///),
                   ]),
                 ),
               ),
-              //),
             ],
           ),
         ),
       ),
     );
-    //);
   }
 }

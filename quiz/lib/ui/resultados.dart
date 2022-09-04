@@ -17,7 +17,6 @@ class Resultados extends StatelessWidget{
       title: 'Quiz',
       theme: ThemeData(
           useMaterial3: true,
-          // colorSchemeSeed: const Color.fromARGB(221, 108, 253, 10),
           scaffoldBackgroundColor: const Color(0xAA21325E),
           brightness: Brightness.light),
       home: Scaffold(
@@ -40,7 +39,6 @@ class Resultados extends StatelessWidget{
                   buttonTopped: () {
                     print('Pressionado');
                     Navigator.pushNamed(context, '/Quiz');
-                    //Navigator.pop(context); //voltar
                   },
                   color: const Color(0xAA17EC0D),
                   buttonText: 'Reiniciar',
@@ -50,7 +48,6 @@ class Resultados extends StatelessWidget{
             ],
           ),
         ),
-        //),
       ),
     );
   }

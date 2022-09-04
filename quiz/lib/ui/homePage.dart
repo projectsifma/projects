@@ -5,7 +5,6 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: const Color(0xAA21325E),
       body: SafeArea(
         bottom: true,
         child: Container(
@@ -28,7 +27,6 @@ class Homepage extends StatelessWidget {
                   bottom: 350,
                   left: 0,
                   right: 0,
-                  //child: Center(
                   child: Column(
                     children: [
                       Container(
@@ -36,7 +34,6 @@ class Homepage extends StatelessWidget {
                         width: 160,
                         decoration: BoxDecoration(
                           color: Colors.deepPurple[50],
-                          //color: Colors.grey[300],
                           borderRadius:
                               const BorderRadius.all(Radius.circular(25)),
                           boxShadow: const [
@@ -61,7 +58,6 @@ class Homepage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  //),
                 ),
                 Positioned(
                   bottom: 100,
@@ -69,7 +65,6 @@ class Homepage extends StatelessWidget {
                   right: 0,
                   child: MyButton(
                       buttonText: 'Iniciar',
-                      //color: Colors.deepPurple,
                       color: const Color(0xAA17EC0D),
                       textColor: Colors.white,
                       buttonTopped: () =>

@@ -6,7 +6,7 @@ class ButtonQuiz extends StatelessWidget {
   final String buttonText;
   
   final buttonTopped;
-  // ignore: use_key_in_widget_constructors
+ 
   const ButtonQuiz({
     this.buttonTopped,
     this.color,
@@ -21,13 +21,9 @@ class ButtonQuiz extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         child: Container(
           padding: const EdgeInsets.all(12.0),
-          //alignment: Alignment.center,
           height: 53,
           width: MediaQuery.of(context).size.width,
           color: color,
-          //child: Padding(
-          //padding: const EdgeInsets.all(8.0),
-          ///child: Container(
           child: Center(
             child: Text(
               buttonText,
@@ -35,8 +31,6 @@ class ButtonQuiz extends StatelessWidget {
                   color: textColor, fontSize: 19, fontWeight: FontWeight.w500),
             ),
           ),
-          //),
-          //),
         ),
       ),
     );

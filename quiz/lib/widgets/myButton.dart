@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 class MyButton extends StatelessWidget {
   final color;
   final textColor;
   final String buttonText;
   final buttonTopped;
-  // ignore: use_key_in_widget_constructors
+
   const MyButton({
     this.buttonTopped,
     this.color,
@@ -24,9 +23,6 @@ class MyButton extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             height: 50,
             width: MediaQuery.of(context).size.width,
-
-            ///width: 325,
-            //margin: const EdgeInsets.symmetric(horizontal: 50),
             color: color,
             child: Center(
               child: Text(
