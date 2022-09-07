@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:quiz4/widgets/topContainer.dart';
+import 'package:quiz4/models/constantes.dart';
+import 'package:quiz4/widgets/countdown.dart';
 import '../widgets/button2.dart';
 import '../widgets/buttonQuiz.dart';
 import '../ui/resultados.dart';
 import '../models/quizDados.dart';
+import '../widgets/countdown.dart';
 import '../widgets/topContainer.dart';
 
 class Quiz extends StatefulWidget {
@@ -15,12 +17,36 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
-
   int perguntaNumero = 1;
   int erros = 0;
   int acertos = 0;
-
   late AnimationController _controller;
+
+  void _mostrarDialo() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: Colors.white,
+          title: const Text('Parabens, você acertou!'),
+          content: const Text(
+              'Sempre deve existir vírgula antes das expressões “mas”, “entretanto”, “portanto”, “logo” e “todavia”, por exemplo. ...'),
+          actions: [
+            MaterialButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Ok')),
+            MaterialButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Cancelar'))
+          ],
+        );
+      },
+    );
+  }
 
   @override
   void dispose() {
@@ -36,7 +62,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
         AnimationController(vsync: this, duration: Duration(seconds: 3));
     _controller.addListener(() {
       if (_controller.isCompleted) {
-        Navigator.pushNamed(context, '/Resultados');
+        Navigator.pushNamed(context, '/Quiz');
       }
     });
     _controller.forward(); //Start
@@ -45,7 +71,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     quiz.shuffle(); //Serve para embaralhar as perguntas
-
     //Função para embaralhar as respostas
     quiz.forEach((elemento) {
       int altCorreta = elemento['Alternativas_Corretas'];
@@ -91,29 +116,34 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
     }
 
     Size size = MediaQuery.of(context).size;
-    return
-      
-    Scaffold(
+    Constants myConstants = Constants();
+    return Scaffold(
       body: SafeArea(
         child: Container(
           //padding: const EdgeInsets.all(18.0),
           width: size.width,
           height: size.height,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xff302b63), Color(0xff0f0c29)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              stops: [0.0, 1.0],
-              tileMode: TileMode.clamp,
-            ),
-          ),
+          decoration: BoxDecoration(gradient: myConstants.gradienBackground),
           child: Column(
             children: [
-              Countdown(
-                  animation: StepTween(begin: 5, end: 0).animate(_controller)),
-             
-              const SizedBox(height: 23.0),
+              TopContainer(
+                height: 130,
+                width: size.width,
+                padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0.0),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Countdown(
+                      animation:
+                          StepTween(begin: 5, end: 0).animate(_controller)),
+                  /* Text(
+                        /*Pergunta $perguntaNumero/10*/ 'Será implementado Temporizador',
+                        style: const TextStyle(
+                            fontSize: 17,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500))*/
+                ),
+              ),
+              const SizedBox(height: 17.0),
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(
@@ -125,7 +155,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                         width: size.width,
                         height: 180,
                         color: Colors.white,
-
                         child: Center(
                           child: Column(
                             children: [
@@ -175,6 +204,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                             child: ButtonQuiz(
                               buttonTopped: () {
                                 print('Pressionado 02');
+                                respondeu(2);
                               },
                               color: Colors.orange,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
@@ -209,6 +239,30 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                         ],
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        MaterialButton(
+                          color: Colors.deepPurple[100],
+                          onPressed: _mostrarDialo,
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Text('Verificar'),
+                          ),
+                        ),
+                        MaterialButton(
+                          color: Colors.deepPurple[100],
+                          onPressed: () {
+                            print('Pressionado 04');
+                            respondeu(4);
+                          },
+                          child: const Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Text('Proxima'),
+                          ),
+                        ),
+                      ],
+                    )
                   ]),
                 ),
               ),

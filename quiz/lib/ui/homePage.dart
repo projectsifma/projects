@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:quiz4/models/constantes.dart';
 import '../widgets/myButton.dart';
+
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Constants myConstants = Constants();
     return Scaffold(
       body: SafeArea(
         bottom: true,
         child: Container(
           height: double.infinity,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xff302b63), Color(0xff0f0c29)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              stops: [0.0, 1.0],
-              tileMode: TileMode.clamp,
-            ),
+          decoration: BoxDecoration(
+            gradient: myConstants.gradienBackground,
           ),
           child: Center(
             child: Stack(

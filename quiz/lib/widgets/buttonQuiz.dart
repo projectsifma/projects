@@ -4,9 +4,8 @@ class ButtonQuiz extends StatelessWidget {
   final color;
   final textColor;
   final String buttonText;
-  
+
   final buttonTopped;
- 
   const ButtonQuiz({
     this.buttonTopped,
     this.color,
