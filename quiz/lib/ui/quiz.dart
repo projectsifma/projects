@@ -11,7 +11,6 @@ import '../widgets/topContainer.dart';
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
   static const routeName = '/Quiz';
-
   @override
   State<Quiz> createState() => _QuizState();
 }
@@ -21,32 +20,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
   int erros = 0;
   int acertos = 0;
   late AnimationController _controller;
-
-  void _mostrarDialo() {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          backgroundColor: Colors.white,
-          title: const Text('Parabens, você acertou!'),
-          content: const Text(
-              'Sempre deve existir vírgula antes das expressões “mas”, “entretanto”, “portanto”, “logo” e “todavia”, por exemplo. ...'),
-          actions: [
-            MaterialButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('Ok')),
-            MaterialButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('Cancelar'))
-          ],
-        );
-      },
-    );
-  }
 
   @override
   void dispose() {
@@ -62,7 +35,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
         AnimationController(vsync: this, duration: Duration(seconds: 3));
     _controller.addListener(() {
       if (_controller.isCompleted) {
-        Navigator.pushNamed(context, '/Quiz');
+        Navigator.pushNamed(context, '/Resultados');
       }
     });
     _controller.forward(); //Start
@@ -75,7 +48,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
     quiz.forEach((elemento) {
       int altCorreta = elemento['Alternativas_Corretas'];
       List respostas = elemento['Respostas'];
-
       String resCorreta = elemento['Respostas'][altCorreta - 1];
 
       respostas.shuffle();
@@ -104,7 +76,44 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
         }
 
         print('acertos totais: $acertos erros totais: $erros');
+//Foi criada uma função com a linha de código abaixo para tornar a função passar independente da função responder
+        /* if (perguntaNumero == 10) {
+          print('Terminou o Quiz!');
+          Navigator.pushNamed(context, '/Resultados',
+              arguments: Argumentos(acertos)); //passando parametro p/ tela
+        } else {
+          perguntaNumero++;
+        }*/
+      });
+    }
 
+    void _mostrarDialo() {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            backgroundColor: Colors.white,
+            title: const Text('Parabens, você acertou!'),
+            content: Text('${quiz[perguntaNumero - 1]['Explicacao']}'),
+            actions: [
+              MaterialButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Ok')),
+              MaterialButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Cancelar'))
+            ],
+          );
+        },
+      );
+    }
+
+    void passar() {
+      setState(() {
         if (perguntaNumero == 10) {
           print('Terminou o Quiz!');
           Navigator.pushNamed(context, '/Resultados',
@@ -132,9 +141,11 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                 padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0.0),
                 child: Align(
                   alignment: Alignment.center,
-                  child: Countdown(
-                      animation:
-                          StepTween(begin: 5, end: 0).animate(_controller)),
+                  child: Center(
+                    child: Countdown(
+                        animation:
+                            StepTween(begin: 10, end: 0).animate(_controller)),
+                  ),
                   /* Text(
                         /*Pergunta $perguntaNumero/10*/ 'Será implementado Temporizador',
                         style: const TextStyle(
@@ -153,7 +164,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                       child: Container(
                         padding: const EdgeInsets.all(10.0),
                         width: size.width,
-                        height: 180,
+                        height: 160,
                         color: Colors.white,
                         child: Center(
                           child: Column(
@@ -194,10 +205,8 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                                 print('Pressionado 01');
                                 respondeu(1);
                               },
-                              color: Colors.orange,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
                                   [0],
-                              textColor: Colors.white,
                             ),
                           ),
                           Center(
@@ -206,10 +215,8 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                                 print('Pressionado 02');
                                 respondeu(2);
                               },
-                              color: Colors.orange,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
                                   [1],
-                              textColor: Colors.white,
                             ),
                           ),
                           Center(
@@ -218,10 +225,8 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                                 print('Pressionado 03');
                                 respondeu(3);
                               },
-                              color: Colors.orange,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
                                   [2],
-                              textColor: Colors.white,
                             ),
                           ),
                           Center(
@@ -230,10 +235,8 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                                 print('Pressionado 04');
                                 respondeu(4);
                               },
-                              color: Colors.orange,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
                                   [3],
-                              textColor: Colors.white,
                             ),
                           ),
                         ],
@@ -253,8 +256,9 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                         MaterialButton(
                           color: Colors.deepPurple[100],
                           onPressed: () {
-                            print('Pressionado 04');
-                            respondeu(4);
+                            print('Passando');
+                            passar();
+                            //respondeu(0);
                           },
                           child: const Padding(
                             padding: EdgeInsets.all(15),

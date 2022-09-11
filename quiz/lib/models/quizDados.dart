@@ -8,6 +8,7 @@ List quiz = [
       "Dom Predro II"
     ],
     "Alternativas_Corretas": 2,
+    "Explicacao": "Foi imperador do Brasil"
   },
   {
     "Pergunta": "O que é Flutter?",
@@ -18,11 +19,13 @@ List quiz = [
       "Um notebook"
     ],
     "Alternativas_Corretas": 3,
+    "Explicacao": "Importante SDK"
   },
   {
     "Pergunta": "O Brasil faz parte de qual bloco econômico?",
     "Respostas": ["Mercosul", "CEI", "NAFTA", "União Europeia"],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Um bloco importante"
   },
   {
     "Pergunta": "Normalmente, quantos litros de sangue uma pessoa tem?",
@@ -33,11 +36,13 @@ List quiz = [
       "Tem 7 litros"
     ],
     "Alternativas_Corretas": 2,
+    "Explicacao": "liquido da vida"
   },
   {
     "Pergunta": "De quem é a famosa frase “Penso, logo existo”?",
     "Respostas": ["Platão", "Galileu Galilei", "Descartes", "Sócrates"],
     "Alternativas_Corretas": 3,
+    "Explicacao": "Importante pensador"
   },
   {
     "Pergunta": "Quais o menor e o maior país do mundo?",
@@ -48,16 +53,19 @@ List quiz = [
       "São Marino e Índia"
     ],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Gigantes"
   },
   {
     "Pergunta": "Quantas casas decimais tem o número pi?",
     "Respostas": ["Milhares", "Vinte", "Centenas", "Infinitas"],
     "Alternativas_Corretas": 4,
+    "Explicacao": "Numero importante"
   },
   {
     "Pergunta": "Quanto tempo a luz do Sol demora para chegar à Terra?",
     "Respostas": ["12 minutos", "1 dia", "8 minutos", "segundos"],
     "Alternativas_Corretas": 3,
+    "Explicacao": "Muito rápido"
   },
   {
     "Pergunta": "Em que período da pré-história o fogo foi descoberto?",
@@ -68,11 +76,13 @@ List quiz = [
       "Período da Pedra Polida"
     ],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Momento divisor na historia da humanidade"
   },
   {
     "Pergunta": "Em qual local da Ásia o português é língua oficial?",
     "Respostas": ["Índia", "Macau", "Filipinas", "Moçambique"],
     "Alternativas_Corretas": 2,
+    "Explicacao": "Ex-colonia portuguesa"
   },
   {
     "Pergunta": "Nesses pares, ambos são mamíferos:",
@@ -83,11 +93,13 @@ List quiz = [
       "Porcos e pinguins"
     ],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Raro"
   },
   {
     "Pergunta": "Quantos olhos a maior parte das aranhas têm?",
     "Respostas": ["Dois", "Quatro", "Quatro pares", "Seis"],
     "Alternativas_Corretas": 3,
+    "Explicacao": "Temida"
   },
   {
     "Pergunta": "O que mede a Escala Mercalli?",
@@ -98,26 +110,31 @@ List quiz = [
       "A intensidade sísmica"
     ],
     "Alternativas_Corretas": 4,
+    "Explicacao": "Importante em terremotos"
   },
   {
     "Pergunta": "Quantos braços tem um polvo?",
     "Respostas": ["Seis", "Oito", "Sete", "Nove"],
     "Alternativas_Corretas": 2,
+    "Explicacao": "Culinária"
   },
   {
     "Pergunta": "Quanto tempo o vidro demora para se decompor?",
     "Respostas": ["500 anos", "1000 anos", " Tempo indeterminado", "4000 anos"],
     "Alternativas_Corretas": 3,
+    "Explicacao": "Importante reciclagem"
   },
   {
     "Pergunta": "De que são constituídos os diamantes?",
     "Respostas": ["Grafite", "Rênio", "Ósmio", "Carbono"],
     "Alternativas_Corretas": 4,
+    "Explicacao": "Precioso"
   },
   {
     "Pergunta": "Qual é o plural de chapéu?",
     "Respostas": ["Chapéus", "Chapeletas", "Cartolas", "Chapéis"],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Chapeu"
   },
   {
     "Pergunta": "Compatriota é aquele indivíduo que...",
@@ -128,11 +145,13 @@ List quiz = [
       "Realiza compras em diferentes países"
     ],
     "Alternativas_Corretas": 3,
+    "Explicacao": "Mesmo país"
   },
   {
     "Pergunta": 'Qual dos advérbios abaixo não existe?',
     "Respostas": ["Bastante", "Quão", "Menas", "Tanto"],
     "Alternativas_Corretas": 3,
+    "Explicacao": "Confunde"
   },
   {
     "Pergunta": "Uma pessoa eclética é aquela que...",
@@ -143,27 +162,32 @@ List quiz = [
       "Tem medo de elevador"
     ],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Diverso"
   },
   {
     "Pergunta": "Quantas sílabas tem a palavra fisioterapeuta?",
     "Respostas": ["Cinco", "Seis", "Sete", "Oito"],
     "Alternativas_Corretas": 3,
+    "Explicacao": "Sílabas"
   },
   {
     "Pergunta":
         'A primeira frase do hino brasileiro diz: "Ouviram do Ipiranga às margens plácidas". O que significa "plácidas"?',
     "Respostas": ["Frias", "Calmas", "Fundas", "Rasas"],
     "Alternativas_Corretas": 2,
+    "Explicacao": "Independencia"
   },
   {
     "Pergunta": 'A palavra "volúpia" está relacionada com:',
     "Respostas": ["Luxúria", "Doença", "Pobreza", "Nervosismo"],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Palavra rara"
   },
   {
     "Pergunta": 'O verbo "aferir" está relacionado a:',
     "Respostas": ["Capacitar", "Medir", "Machucar", "Manchar"],
     "Alternativas_Corretas": 2,
+    "Explicacao": "Medidas"
   },
   {
     "Pergunta": 'A palavra "latifúndio" está relacionada com:',
@@ -174,6 +198,7 @@ List quiz = [
       "Grande área rural"
     ],
     "Alternativas_Corretas": 4,
+    "Explicacao": "Posses de terra"
   },
   {
     "Pergunta": 'Incumbência significa...',
@@ -184,27 +209,32 @@ List quiz = [
       "Uma doença pulmonar"
     ],
     "Alternativas_Corretas": 2,
+    "Explicacao": "Responsabilidade"
   },
   {
     "Pergunta": 'Qual das palavras abaixo é sinônimo de banal?',
     "Respostas": ["Trivial", "Semanal", "Bananal", "Sensacional"],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Banal"
   },
   {
     "Pergunta": 'O antônimo de agitado é...',
     "Respostas": ["Tranquilo", "Afobado", "Atrasado", "Bacana"],
     "Alternativas_Corretas": 1,
+    "Explicacao": "Tranquilo"
   },
   {
     "Pergunta": 'Pejorativo é algo que pode...',
     "Respostas": ["Cair", "Alegrar", "Crescer", "Ofender"],
     "Alternativas_Corretas": 4,
+    "Explicacao": "Ofender"
   },
   {
     "Pergunta": 'Qual dos verbos abaixo está no passado?',
     "Respostas": ["Voltará", "Olhei", "Sei", "Andarei"],
     "Alternativas_Corretas": 2,
-  },
+    "Explicacao": "Olhei"
+  }, /*
   {
     "Pergunta": 'Qual das palavras abaixo é um adjetivo?',
     "Respostas": ["Geada", "Galeto", "Gordo", "Gelatina"],
@@ -459,6 +489,6 @@ List quiz = [
    "Pergunta": '',
    "Respostas": ["", "", "", ""],
    "Alternativas_Corretas": 0,
-},
+},*/
 */
 ];
