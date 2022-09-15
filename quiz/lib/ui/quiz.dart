@@ -15,7 +15,6 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
-
   int perguntaNumero = 1;
   int erros = 0;
   int acertos = 0;
@@ -33,7 +32,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 3));
+        AnimationController(vsync: this, duration: Duration(seconds: 80));
     _controller.addListener(() {
       if (_controller.isCompleted) {
         Navigator.pushNamed(context, '/Resultados');
@@ -91,9 +90,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
     }
 
     Size size = MediaQuery.of(context).size;
-    return
-      
-    Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Container(
           //padding: const EdgeInsets.all(18.0),
@@ -111,8 +108,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
           child: Column(
             children: [
               Countdown(
-                  animation: StepTween(begin: 5, end: 0).animate(_controller)),
-             
+                  animation: StepTween(begin: 80, end: 0).animate(_controller)),
               const SizedBox(height: 23.0),
               Padding(
                 padding: const EdgeInsets.all(18.0),
@@ -125,7 +121,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                         width: size.width,
                         height: 180,
                         color: Colors.white,
-
                         child: Center(
                           child: Column(
                             children: [
@@ -175,6 +170,7 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                             child: ButtonQuiz(
                               buttonTopped: () {
                                 print('Pressionado 02');
+                                respondeu(2);
                               },
                               color: Colors.orange,
                               buttonText: quiz[perguntaNumero - 1]['Respostas']
