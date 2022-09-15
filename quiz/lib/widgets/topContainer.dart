@@ -1,22 +1,32 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quiz4/models/list.dart';
-import '../ui/quiz.dart';
+import '../models/constantes.dart';
 
-class Countdown extends AnimatedWidget {
-  Countdown({Key? key, required this.animation})
-      : super(key: key, listenable: animation);
-  Animation<int> animation;
+class TopContainer extends StatelessWidget {
+  final double height;
+  final double width;
+  final Widget child;
+  final EdgeInsets padding;
+  const TopContainer(
+      {required this.height,
+      required this.width,
+      required this.child,
+      required this.padding});
 
   @override
   Widget build(BuildContext context) {
-    Duration clockTimer = Duration(seconds: animation.value);
-    var timerText = '${clockTimer.inMinutes.remainder(60).toString()} : '
-        '${(clockTimer.inSeconds.remainder(60) % 60).toString().padLeft(2, '0')}';
-        
-    return Text(
-      '${timerText}',
-      style: TextStyle(fontSize: 40, color: Theme.of(context).primaryColor),
+    Constants myConstants = Constants();
+    return Container(
+      padding:
+          padding != null ? padding : EdgeInsets.symmetric(horizontal: 20.0),
+      decoration: BoxDecoration(
+          gradient: myConstants.gradienTemporizador,
+          borderRadius: BorderRadius.only(
+            bottomRight: Radius.circular(30.0),
+            bottomLeft: Radius.circular(30.0),
+          )),
+      height: height,
+      width: width,
+      child: child,
     );
   }
 }
