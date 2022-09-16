@@ -87,18 +87,6 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
       });
     }
 
-    void passar() {
-      setState(() {
-        if (perguntaNumero == 10) {
-          print('Terminou o Quiz!');
-          Navigator.pushNamed(context, '/Resultados',
-              arguments: Argumentos(acertos)); //passando parametro p/ tela
-        } else {
-          perguntaNumero++;
-        }
-      });
-    }
-
     void _mostrarDialo() {
       showDialog(
         context: context,
@@ -124,6 +112,18 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
       );
     }
 
+    void passar() {
+      setState(() {
+        if (perguntaNumero == 10) {
+          print('Terminou o Quiz!');
+          Navigator.pushNamed(context, '/Resultados',
+              arguments: Argumentos(acertos)); //passando parametro p/ tela
+        } else {
+          perguntaNumero++;
+        }
+      });
+    }
+
     Size size = MediaQuery.of(context).size;
     Constants myConstants = Constants();
     return Scaffold(
@@ -141,17 +141,11 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
                 padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0.0),
                 child: Align(
                   alignment: Alignment.center,
-                  /*child: Center(
+                  child: Center(
                     child: Countdown(
                         animation:
                             StepTween(begin: 10, end: 0).animate(_controller)),
-                  ),*/
-
-
-
-
-
-                  
+                  ),
                   /* Text(
                         /*Pergunta $perguntaNumero/10*/ 'Será implementado Temporizador',
                         style: const TextStyle(
