@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:quiz4/models/constantes.dart';
 import '../widgets/myButton.dart';
-
 class Argumentos {
   int acertos = 0;
   Argumentos(this.acertos);
 }
-
 class Resultados extends StatelessWidget {
   static const routeName = '/Resultados';
-
   const Resultados({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
