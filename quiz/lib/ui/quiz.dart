@@ -28,17 +28,41 @@ class _QuizState extends State<Quiz> with SingleTickerProviderStateMixin {
     super.dispose();
   }
 
-  @override
   void initState() {
     super.initState();
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 3));
+        AnimationController(vsync: this, duration: Duration(seconds: 10));
     _controller.addListener(() {
       if (_controller.isCompleted) {
-        Navigator.pushNamed(context, '/Resultados');
+        _mostrarDialoTime();
       }
     });
     _controller.forward(); //Start
+  }
+
+  void _mostrarDialoTime() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: Colors.white,
+          title: const Text('Uhh que pena, o tempo expirou!'),
+          content: Text('${quiz[perguntaNumero - 1]['Alternativas_Corretas']}'),
+          actions: [
+            MaterialButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Ok')),
+            MaterialButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Cancelar'))
+          ],
+        );
+      },
+    );
   }
 
   @override

@@ -4,7 +4,7 @@ import 'package:quiz4/models/list.dart';
 import '../ui/quiz.dart';
 
 class Countdown extends AnimatedWidget {
-  Countdown({Key? key, required this.animation})
+   Countdown({Key? key, required this.animation})
       : super(key: key, listenable: animation);
   Animation<int> animation;
 
